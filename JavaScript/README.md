@@ -16,6 +16,12 @@ http://localhost/~youngbear/learn/JavaScript/code/hello.js
 [测试路径](http://localhost/~youngbear/learn/JavaScript/code/hello.js)
 
 # 数据类型
+1. Number
+2. 字符串
+3. 布尔值
+4. null和undefined
+5. 数组
+6. 对象
 
 ## Number
     JavaScript不区分整数和浮点数，统一用Number表示。
