@@ -574,6 +574,162 @@ Python允许在定义class的时候，定义一个特殊的`__slots__`变量，�
 
 `@score.setter` 设置属性名为score的setter()方法。
 
+## 多重继承
+
+python可以多重继承，eg:
+
+```
+class Animal(object):
+    pass
+
+# 大类
+class Mammal(Animal):
+    pass
+
+class Bird(Animal):
+    pass
+
+class Runnable(object):
+    def run(self):
+        print("Running...")
+
+class Flyable(object):
+    def fly(self):
+        print("Flying...")
+
+class Dog(Mammal, Runnable):
+    pass
+
+class Bat(Mammal, Flyable):
+    pass
+
+class Parrot(Bird, Flyable):
+    pass
+
+class Ostrich(Bird, Runnable):
+    pass
+
+```
+
+### Mixln
+
+在设计类的继承关系时，通常，主线都是**单一集成**下来的(类似java的继承)，例如`Ostrich`继承自`Bird`。但是，如果需要"混入"额外的功能，通过**多重继承**就可以实现(类似java的接口)，比如，让`Ostrich`除了继承自`Bird`外，再同时继承`Runnable`。这种设计通常称之为Mixln。
+
+为了更好地看出继承关系，我们把`Runnable`和`Flyable`改为`RunnableMixIn`和`FlyableMixIn`。类似的，你还可以定义出肉食动物`CarnivorousMixIn`和值食动物`HerbivoresMixIn`，让某个动物同时拥有好几个MixIn:
+
+```
+class RunnableMixIn(object):
+    def run(self):
+        print("Running...")
+
+class CarnivorousMixIn(object):
+    def eatMeat(self):
+        print("Eating meat...")
+
+
+class Dog(Mammal, RunnableMixIn, CarnivorousMixIn):
+    pass
+```
+
+MixIn的目的就是给一个类增加多个功能，这样，在设计类的时候，我们优先考虑通过多重继承来组合多个MixIn的功能，而不是设计多层次的复杂的继承关系。
+
+## 定制类
+
+**__str__** :  相当于java中的toString()。`__repr__()`
+
+**__iter__** : 如果一个类想被用于`for ... in`循环，类似`list`或`tuple`那样，就必须实现一个`__iter__()`方法，该方法返回一个迭代对象，然后，Python的for循环就会不断调用该迭代对象的`__next__()`方法拿到循环的下一个值，直到遇到StopIteration错误时退出循环。
+
+```
+class Fib(object):
+    def __init__(self):
+        self.a, self.b = 0, 1 # 初始化两个计数器a, b
+
+    def __iter__(self):
+        return self # 实例本身就是迭代对象，故返回自己
+
+    def __next__(self):
+        self.a, self.b = self.b, self.a + self.b # 计算下一个值
+        if self.a > 100000: # 退出训话的条件
+            raise StopIteration()
+        return self.a # 返回下一个值
+
+for n in Fib():
+    print(n)
+```
+
+**__getitem** : Fib实例虽然能作用于for循环，看起来和list有点像，但是，把它当成list来使用还是不行。要表现得像list那样按照下标取出元素，需要实现`__getitem__`方法：
+
+```
+def __getitem__(self, n):
+        a, b = 1, 1
+        for x in range(n):
+            a, b = b, a + b
+        return a
+f = Fib()
+print(f[3])
+```
+
+**__getattr__** : 只有在没有找到属性的情况下，才调用`__getattr__`，已有的属性，不会在`__getattr__`中查找。
+
+**__call__** : 调用无参数时调用的方法。使用`callable()`来判断一个变量是对象还是函数。
+
+## 使用枚举类
+
+```
+#!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
+from enum import Enum, unique
+Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+for name, member in Month.__members__.items():
+    print(name, '=>', member, ',', member.value)
+
+@unique
+class Weakday(Enum):
+    Sun = 0 # Sun的value被设定为0
+    Mon = 1
+    Tue = 2
+    Wed = 3
+    Thu = 4
+    Fri = 5
+    Sat = 6
+```
+
+`@unique`装饰器可以帮助我们检查保证没有重复值。
+
+访问这些枚举类型可以有若干种方法：
+
+```
+day1 = Weekday.Mon
+print(day1)
+print(Weekday.Thu)
+print(Weekday['Tue'])
+print(Weekday.Tue.value)
+
+print(day1 == Weekday.Mon)
+print(day1 == Weekday.Tue)
+
+print(Weekday(1))
+
+print(day1 == Weekday(1))
+```
+
+## 使用元类
+
+**type()** : `type()`函数可以查看一个类型或者变量的类型。
+
+`type()`函数也允许我们动态创建出类来，也就是说，动态语言本身支持运行期动态创建类，
+
+**metaclass** : `metaclass`，直译为**元类**，简单的解释就是：
+
+当我们定义了类以后，就可以根据这个类创建出实例，所以：**先定义类，然后创建实例**。
+
+但是如果我们想创建出类呢？那就必须根据`metaclass`创建出类，所以：**先定义metaclass，然后创建类**。
+
+连接起来就是：**先定义metaclass，就可以创建类，最后创建实例**。
+
+所以，metaclass允许你创建类或者修改类。换句话说，你可以把类看成是metaclass创建出来的“实例”。
+
+(未掌握)
 
 
 
