@@ -731,6 +731,37 @@ print(day1 == Weekday(1))
 
 (未掌握)
 
+# IO编程
+
+```
+#!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
+
+# 读文件
+try:
+    f = open('C:\\Users\\ysx\\github\\LearningNotesYsx\\python\\code\\test.txt', 'r')
+    print(f.read())
+finally:
+    if f:
+        f.close()
+
+# 读文件，指定编码格式
+try:
+    f = open('C:\\Users\\ysx\\github\\LearningNotesYsx\\python\\code\\test_1.txt', 'r', encoding='gbk')
+    print(f.read())
+finally:
+    if f:
+        f.close()
+
+# 写文件
+try:
+    f = open('C:\\Users\\ysx\\github\\LearningNotesYsx\\python\\code\\test_2.txt', 'w')
+    f.write('Hello, world!')
+finally:
+    if f:
+        f.close()
+```
+
 
 
 
