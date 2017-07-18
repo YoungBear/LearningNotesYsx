@@ -762,6 +762,65 @@ finally:
         f.close()
 ```
 
+# 进程和线程
+
+## 多进程
+`fork()`函数，会有两个返回值，在父进程返回进程ID号，在子线程返回0.
+
+`os.fork()` : 创建一个进程
+
+`os.getpid()` : 返回当前进程的进程号
+
+`os.getppid()` :  返回当前进程**父进程**的进程号
+
+注意： 最好在linux或者mac下运行。
+
+## 多线程
+`MainThread`: 主线程
+
+```
+lock.acquire()
+try:
+    # do something
+finally:
+    lock.release()
+```
+
+## ThreadLocal
+
+```
+#!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
+
+import threading
+
+# 创建全局ThreadLocal对象:
+local_school = threading.local()
+
+def porcess_student():
+    # 获取当前线程关联的student:
+    std = local_school.student
+    print('Hello, %s (in %s)' % (std, threading.current_thread().name))
+
+def process_thread(name):
+    # 绑定ThreadLocal的student:
+    local_school.student = name
+    porcess_student()
+
+t1 = threading.Thread(target = process_thread, args = ('Alice',), name = 'Thread-A')
+t2 = threading.Thread(target = process_thread, args = ('Bob',), name = 'Thread-B')
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+
+```
+全局变量`local_school`就是一个ThreadLocal对象，每个`Thread`对它都可以读写`student`属性，但互不影响。你可以把`local_school`看成全局变量，但每个属性如`local_school.student`都是线程的局部变量，可以任意读写而互不干扰，也不用管理锁的问题，`ThreadLocal`内部会处理。
+
+可以理解为全局变量`local_school`是一个`dict`，不但可以用`local_school.student`，还可以绑定其他变量，如`local_school.teacher`等等。
+
+`ThreadLocal`最常用1的地方就是为每个线程绑定一个数据库连接，HTTP请求，用户身份信息等，这样一个线程的所有调用到的处理函数都可以非常方便地访问这些资源。
+
 
 
 
