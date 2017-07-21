@@ -408,6 +408,67 @@ s;//s.delete(3);
 
 Map和Set是ES6标准新增的数据类型，请根据浏览器的支持情况决定是否要使用。
 
+# iterable
+遍历`Array`可以采用下标循环，遍历`Map`和`Set`就无法使用下标。为了统一集合类型，ES6标准引入了新的iterable类型，Array、Map和Set都属于iterable类型。
+
+具有iterable类型的集合可以通过新的`for ... of`循环来遍历。
+
+`for ... of`循环是ES6引入的新的语法，请测试你的浏览器是否支持：
+
+```
+// for ... in 与 for ... of的区别
+var a = ['A','B','C'];
+a.name = 'Hello';
+for (var x in a) {
+    alert(x);//'0','1','2','name'
+}
+a.length;//3
+```
+`for ... in`循环将把name包括在内，但Array的length属性却不包括在内。
+
+`for ... of`循环则完全修复了这些问题，它只循环集合本身的元素：
+
+这就是为什么要引入新的`for ... of`循环。
+```
+var a = ['A','B','C'];
+a.name = 'Hello';
+for (var x of a) {
+    alert(x);//'A','B','C'
+}
+```
+然而，更好的方式是直接使用iterable内置的forEach方法，它接收一个函数，每次迭代就自动回调该函数。以Array为例：
+```
+var a = ['A','B','C'];
+a.forEach(function (element, index, array) {
+    // element: 指向当前元素的值
+    // index: 指向当前索引
+    // array: 指向Array对象本身
+    alert(element);
+});
+```
+
+Set与Array类似，但Set没有索引，因此回调函数的前两个参数都是元素本身：
+```
+var s = new Set(['A', 'B', 'C']);
+s.forEach(function (element, sameElement, set) {
+    alert(element);
+});
+```
+Map的回调函数参数依次为value、key和map本身：
+```
+var m = new Map([[1, 'x'], [2, 'y'], [3, 'z']]);
+m.forEach(function (value, key, map) {
+    alert(value);
+});
+```
+如果对某些参数不感兴趣，由于JavaScript的函数调用不要求参数必须一致，因此可以忽略它们。例如，只需要获得Array的element：
+```
+var a = ['A', 'B', 'C'];
+a.forEach(function (element) {
+    alert(element);
+});
+```
+
 
 
 
