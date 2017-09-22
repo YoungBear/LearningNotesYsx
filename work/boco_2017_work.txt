@@ -1,0 +1,2635 @@
+﻿你好
+http://192.168.100.251/webAuth/index.htm?go.microsoft.com/fwlink/?LinkID=219472&clcid=0x409
+
+13681682771
+wifi
+boco-guest:
+bocoguest@6789
+
+username：
+wengyifan
+password:
+123456
+
+boco-office
+bocoxayfzx@6789
+
+掌上网优：
+weihu
+Whu@1234
+
+!Bear123456yang
+
+email：
+4Bear123456yang
+
+.gitignore
+
+*.iml
+.gradle
+local.properties
+.idea
+.DS_Store
+build
+captures
+
+AndroidStudio  常见问题：
+
+## Error:Could not find com.android.tools.build:gradle:2.2.3
+
+解决方案：
+http://stackoverflow.com/questions/36398073/errorcould-not-find-com-android-tools-buildgradle2-1-0-alpha1
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+}
+
+1. Failed to crunch file ...
+项目路径太长。
+
+http://blog.csdn.net/jacklog/article/details/53185276
+
+\Users\ysx\.android
+
+keytool -list -v -keystore debug.keystore
+
+默认密码是android
+
+SHA1: 84:3D:AA:CE:CB:9C:8E:BA:EC:87:AE:43:A2:DC:8E:72:3A:1B:49:A0
+
+C:\Users\ysx\ysx_boco_2017.jks
+
+ysx_boco_2017
+
+alias:
+ysx
+password:
+123456
+
+View：
+public static final int VISIBLE = 0x00000000;
+public static final int INVISIBLE = 0x00000004;
+public static final int GONE = 0x00000008;
+
+
+adb logcat -v time | grep AndroidRuntime -i
+
+
+https://ipn.boco.com.cn
+
+./gradlew cleanBuildCache
+
+./gradlew assembleRelease
+
+快速开发：
+
+https://github.com/TommyLemon/Android-ZBLibrary
+
+https://github.com/litesuits/android-common
+
+todo:
+使用公司邮箱，申请百度开发key
+
+adb logcat -c; adb logcat | grep AndroidRuntime
+
+adb shell monkey -p com.boco.yunnan -v 100
+
+adb shell monkey -p <package_name> -v <event_number>
+
+
+测试账号：wangming_t1
+密码：Sxwy!23
+密码密文：N7be6rG9zzUrgCZKvzWNf7+U4AU=
+
+工单：
+username
+zhangshaowei
+
+Base64
+U3h3eSEyMw==
+
+907089
+
+lvyue
+
+#!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
+
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+ssh-keygen -t rsa -C "develop_yang@yeah.net"
+
+http://data.okfn.org
+
+http://www.wunderground.com/history
+
+
+mysql root 密码：123456
+
+2017-09-22
+访问：20371次
+todo：
+1. 暂停回放,继续回放，回放进度条，快进回放。
+2. setProp来区分debug 还是release
+
+add pause and continue, multiple speed support
+
+    private void replaySpeedChange(int index) {
+//        List<ImageView> images = Arrays.asList(mIvReplay1Speed, mIvReplay2Speed, mIvReplay4Speed);
+//        for (int i = 0; i < images.size(); i++) {
+//            images.get(i).setSelected(index == i);
+//        }
+        switch (index) {
+            case 1:
+                mIvReplay1Speed.setSelected(true);
+                mIvReplay2Speed.setSelected(false);
+                mIvReplay4Speed.setSelected(false);
+                break;
+            case 2:
+                mIvReplay1Speed.setSelected(false);
+                mIvReplay2Speed.setSelected(true);
+                mIvReplay4Speed.setSelected(false);
+                break;
+            case 4:
+                mIvReplay1Speed.setSelected(false);
+                mIvReplay2Speed.setSelected(false);
+                mIvReplay4Speed.setSelected(true);
+                break;
+            default:
+                break;
+        }
+    }
+
+    <servlet-mapping>  
+        <servlet-name>SpringMVC</servlet-name>  
+        <!-- 此处可以可以配置成*.do，对应struts的后缀习惯 -->  
+        <url-pattern>/</url-pattern>  
+    </servlet-mapping>  
+
+192.168.7.19
+
+格式化字符串
+getString(R.string.upload_percent_format, 50)
+<string name="upload_percent_format">已上传%d%%</string>
+
+2017-09-21
+
+mysql：
+show databases;
+use user;
+create table user (id varchar(20) primary key, name varchar(20));
+insert into user values ('1', 'Michael');
+
+
+
+mysql> grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;
+
+
+grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;
+
+
+SELECT DISTINCT CONCAT('User: [', user, '''@''', host, '];') AS USER_HOST FROM user; 
+
+47.95.249.79
+
+Ubuntu mysql root password：123456
+
+
+import mysql.connector
+
+connect = mysql.connector.connect(user='root', password='123456', database='test')
+cursor = connect.cursor()
+cursor.execute('create table user (id varchar(20) primary key, name varchar(20))')
+cursor.execute('insert into user (id, name) values (%s, %s)', ['1', 'Michael'])
+
+
+net start mysql
+
+
+访问：20241次
+
+'create table user (id varchar(20) primary key, name varchar(20))'
+
+cursor.execute('insert into user (id, name) values (\'1\', \'Michael\')')
+
+cursor.execute('select * from user where id=?', ('1',))
+
+
+
+2017-09-20
+
+访问：20156次
+
+latitude: 34.185734, longitude: 108.880601
+
+adb logcat | grep -E "BDLocationManager|AutoMeasureActivity|MeasureActivity"
+
+ latitude: 34.185724, longitude: 108.880646
+ 
+  onReceiveLocation, latitude: 34.185724, longitude: 108.880646
+D/AutoMeasureActivity( 3995): mCurrentLatlng: latitude: 34.185724, longitude: 108.880646
+
+onReceiveLocation, latitude: 34.185719, longitude: 108.880623, AddrStr: 中国陕西省西安市雁塔区丈八二路16号
+
+34.185724,108.880646
+
+34.185719,108.880623
+
+
+Ctrl + Alt + U 生成函数注释
+
+1. 统一action_bar
+    @BindView(R.id.action_iv_back)
+    ImageView mActionIvBack;
+    @BindView(R.id.action_tv_title)
+    TextView mActionTvTitle;
+    @BindView(R.id.action_iv_more)
+    ImageView mActionIvMore;
+	
+	
+
+
+2017-09-19
+
+develop_yang@yeah.net
+
+ssh-keygen -t rsa -C "develop_yang@yeah.net"
+
+http://47.95.249.79:8080 
+
+# set oracle jdk environment
+export JAVA_HOME=/usr/lib/jdk1.8.0_144
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+# tomcat
+export TOMCAT_HOME=/usr/lib/apache-tomcat-9.0.0.M26
+export CATALINA_HOME=/usr/lib/apache-tomcat-9.0.0.M26
+
+useradd -mk /home/huahua -s /bin/bash huahua
+
+useradd -r -m -s /bin/bash huahua
+
+47.95.249.79
+ysx_2017
+
+377188
+
+2017-09-15
+访问：19709次
+
+adb uninstall com.boco.wenzhou.indoormeasure
+
+multiDexEnabled true
+
+app:transformClassesAndResourcesWithProguardForRelease
+
+# for DexGuard only
+-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
+
+
+2017-09-14
+
+已下载图片
+
+http://192.168.7.18:8888/appservice/upload
+
+http://192.168.7.18:8888/appservice/upload/2017091202/measure_result_log.csv
+
+http://192.168.7.18:8888/appservice/upload/2017091108/移动_6F_1504174526419.csv
+
+appservice/upload/2017091202/Koala.jpg
+
+http://192.168.7.18:8888/appservice/upload/358518080444218_1505444853090/measure_result_image.png
+
+http://192.168.7.18:8888/appservice/buildfile/zhongxin/zhongxin-C-3F.png
+
+http://192.168.7.18:8888/appservice/buildfile/zhongxin/zhongxin-A-2F.png
+
+/buildfile/zhongxin/zhongxin-A-3F.png
+
+todo
+
+Merge 代码的时候，可以选择典型的案例，作为后续代码review的素材。
+
+
+
+     private static final String URL_HOST_TEST = "http://192.168.7.11:8989/";
+-    private static final String URL_HOST_TEST_WU = "http://192.168.7.18:8888/";
+
+     private static final String URL_HOST_RELEASE = "http://120.131.10.162:8090/";
+
+     private static final String URL_HOST =
+-            IS_DEBUG ? URL_HOST_TEST_WU : URL_HOST_RELEASE;
++            IS_DEBUG ? URL_HOST_TEST : URL_HOST_RELEASE;
+
+     private static final String URL_APP_SERVICE = "appservice/";
+
+addId for AdvancedRecyclerView
+
+
+
+android:foreground="?attr/selectableItemBackground"
+
+RecyclerViewExpandableItemManager expMgr = new RecyclerViewExpandableItemManager(null);
+
+composedAdapter.addAdapter(expMgr.createWrappedAdapter(new MyExpandableAdapter(expMgr, clickListener)));
+
+expMgr.attachRecyclerView(rv);
+
+recyclerView.setAdapter(adapter);
+
+http://192.168.7.18:8888/appservice/api/taskManagement/findEvaluation
+
+2017-09-13
+
+访问：19537次
+
+http://192.168.7.18:8888/appservice/upload/2017091202/Koala.jpg
+
+
+
+
+2017-09-12
+
+访问：19401次
+
+todo
+1. 获取RSRP的函数原理研究。
+2. 室内打点UI。
+3. 是否支持自动打点：
+    3.1 经纬度判断，
+
+
+2017-09-11
+
+访问：19312次
+
+百度地图 4.4.0 截图失败。
+
+
+
+2017-09-08
+
+访问：19054次
+
+2017-09-07
+
+optimize memory and scroll logic when replay
+
+访问：18973次
+
+总Context实例个数 = Service个数 + Activity个数 + 1（Application对应的Context实例）
+
+adb shell dumpsys meminfo [package_name/pid]
+
+adb logcat | grep -E "UploadUtils|MeasureSignalActivity|AndroidRuntime"
+
+2017-09-06
+
+访问：18881次
+
+adb uninstall "com.boco.wenzhou.indoormeasure"
+
+adb shell dumpsys meminfo "com.boco.wenzhou.indoormeasure"
+
+adb shell dumpsys meminfo "com.example.hello"
+
+com.mt.mtxx.mtxx
+
+adb shell dumpsys meminfo "com.mt.mtxx.mtxx"
+
+
+2017-09-05
+访问：18798次
+
+解决主要的几个问题：
+
+1. 添加混淆配置，解决网络访问解析失败的问题。
+2. 使用.9图片作为item背景 -- ok。
+3. 与后台联调，解决乱码，得分等问题。
+4. UI部分调整。
+
+明天计划：
+
+解决部分手机OOM的情况。
+
+OOM参考：
+
+http://www.cnblogs.com/android-blogs/p/5586480.html
+
+http://blog.csdn.net/harryweasley/article/details/51955467
+
+http://blog.csdn.net/jdsjlzx/article/details/44228935
+
+适配：
+
+oppo R7 crash
+
+
+
+
+
+
+2017-09-01
+
+glide 4.0与3.7的区别
+
+混淆配置
+# 忽略警告
+-ignorewarning
+
+访问：18461次
+
+
+
+test_example.jks
+
+test_example
+
+test_alias
+
+123456
+
+2017-08-31
+
+访问：18367次
+
+git clone git@10.10.2.143:NOSTool-Group/WenzhouIndoorMeasure.git
+
+git clone http://111.204.35.214:40031/NOSTool-Group/WenzhouIndoorMeasure
+
+2017-08-30
+
+访问：18275次
+
+Android 7.0 小米4C：
+08-30 10:31:57.228 16108-16108/com.boco.wenzhou.indoormeasure D/MeasureSignalActivity: uri.getPath(): /external_files/MeasureApp/log/中兴_2F_2017-08-30 10:28:24.csv
+08-30 10:31:57.229 16108-16108/com.boco.wenzhou.indoormeasure D/MeasureSignalActivity: file.exists(): false
+
+Android 5.1 魅蓝note3
+08-30 10:36:22.644 10618-10618/com.boco.wenzhou.indoormeasure D/MeasureSignalActivity: uri.getPath(): /document/primary:MeasureApp/log/中兴_2F_2017-08-29 14:07:15.csv
+08-30 10:36:22.644 10618-10618/com.boco.wenzhou.indoormeasure D/MeasureSignalActivity: file.exists(): false
+
+
+uri: content://com.android.externalstorage.documents/document/primary%3AMeasureApp%2Flog%2F%E9%98%BF%E9%B2%81_2F_2017-08-29%2015%3A10%3A13.csv
+uri.getAuthority(): com.android.externalstorage.documents
+
+
+ysx,2F,324.10547,1089.6934,0,-100,-10,30,1504074722471,true
+
+
+2017-08-29
+
+访问：18203次
+
+uri.getPath(): /document/primary:MeasureApp/log/阿鲁_2F_2017-08-29 15:10:13.csv
+
+2017-08-28
+
+cp ./main/java/com/boco/yunnan/url/UrlUtils.java ~/
+
+cp ~/UrlUtils.java ./main/java/com/boco/yunnan/url/
+
+访问：18086次
+
+会议：
+
+
+1. 日志文件加密(可生成日志加密文件，包含关键值) - 王鑫
+2. 暂停打点。可实现。需要记录暂停行为。-- 杨少雄
+3. 回放，选择参数值。-- 杨少雄
+4. 上传下载。- 杨侃 上传前校验。失败则不弹出。不看到check文件。
+5. 打点样式调整。-- 杨少雄
+
+todo：
+
+1. 日志文件加密(可生成日志加密文件，包含关键值) - 王鑫
+2. E锁频(优先级低)
+3. 预设打点。(熟悉图纸，规划路线。) 优先级低
+4. 暂停打点。可实现。需要记录暂停行为。-- 杨少雄
+5. 删点。删除手动打点。自动记录的点需要记录。
+6. 回放，选择参数值。-- 杨少雄
+7. 上传下载。- 杨侃 上传前校验。失败则不弹出。不看到check文件。
+
+8. 打点样式调整。-- 杨少雄
+
+图标- 手动打点用特殊图标表示。
+圆圈
+
+
+
+2017-08-26
+
+访问：17937次
+
+
+
+2017-08-25
+
+访问：17818次
+
+步长设置： done
+图例设置： done
+鹰眼，可收起： done
+
+
+2017-08-25
+
+^yhn@wsx*ik,
+
+会议
+
+1. 海拔-app
+2. 坐标转换
+3. 步长， 1s以内
+4. 图例
+5. 图纸修改(优先级低)
+6. 暂停
+7. 鹰眼，可收起
+8. 日志分析
+9. E频段。锁频。找刘兵。
+10. 百度地图室内地图，室内定位。
+
+防作弊：
+
+
+
+
+C:\Users\ysx\boco2017\decompilation\start\dex2jar-2.0\d2j-dex2jar.bat classes.dex .
+
+即d2j-dex2jar.bat <dex_file> [dest_directory]
+
+C:\Users\ysx\boco2017\decompilation\start\apktool.bat d -f shaanxi_app_release_1.0.1_20170824194043_101_jiag u_sign.apk
+
+即apktool d -f <apk_file> [dest_directory]
+
+1. 百度地图室内地图，室内定位
+2. 360加固保
+
+
+2017-08-24
+访问：17691次
+
+ysx_test.jks
+
+1qaz2wsx
+
+Alias：ysx_test_alias
+Password:123456
+
+
+百度定位官方AS Demo
+todo:
+1. 使用release签名。(是否需要混淆)
+2. 更新gradle版本。 done
+
+
+
+
+在进行室内测试时，利用图纸中的坐标来对测试点进行定位。
+对测试数据进行收集，用户导入测试记录。
+
+收集PCI、RSRP、RSRQ等测试数据，并根据参考门限值实时在图纸上渲染。
+
+测试结束后将测试log上传服务器，系统分析日志文件，进行覆盖评估和故障诊断。
+
+项目框架的搭建。
+获取定位数据和测量数据并封装。
+根据测量数据值实时在图纸上渲染，根据日志文件在图纸上回放。
+渲染测量图纸，日志文件的保存及上传。
+
+
+2017-08-23
+
+访问：17585次
+
+日志文件存储路径: /storage/emulated/0/MeasureApp/log/
+图片存储路径: /storage/emulated/0/MeasureApp/image/
+
+使用百度定位，在室内的话，一般是采用网络定位，即WiFi定位和基站定位，这种定位的精度是40m。
+如果可以获取到GPS卫星信号，则精度可以达到10m。
+
+在室内，我们很难获取到GPS卫星信号，所以获得的海拔数据只能作为一个参考，其不能用来区分不同的楼层。
+
+由于手机自身硬件传感器的因素，必然获取不到精确的海拔数据。
+所以，需要结合专业的测量高度的仪器，结合手机，来获取精确的数据。
+
+
+掌上网优平台可实现无线网络概览信息发布，站址分布GIS呈现，小区各类信息的即席查询显示等，还可以进行无线网络现场测试和分析，提升优化人员一线生产维护和排障工作效率。
+
+需求分析，项目整体框架搭建
+
+项目分工，开发任务的分发
+与服务器接口联调，WebView与Android联调。
+适配Android高版本
+APK混淆，release打包
+
+
+聚精彩是一款安装在智能电视，机顶盒等Android设备上的视频客户端应用。
+
+4.0版本在3.6版本上，完成了全新的UI升级，在用户中心新增购买SVIP功能，使用全新播放器，为广大TV用户提供流畅、清晰的视频服务。
+
+
+个人中心、最近观看和我的收藏模块
+二维码登录
+购买SVIP，扫码支付功能
+单片付费功能，并与播放器模块交互
+应用推荐
+Linux环境下使用ant进行多渠道打包
+
+
+
+文件管理器作为Android系统一个基础应用，可以浏览/storage/ 目录下的文件，并且可以结合系统Media ContentProvider来对文件进行分类浏览。用户可以进行创建、删除、重命名、压缩、解压缩等操作。
+
+在Android 5.1平台上，完成新的UI界面和适配工作
+	在程序中注册ContentObserver，当用手机连接PC并使用MTP模式的时候，当手机上发生文件的增加、删除、重命名等动作的时候，Observer可以接收到消息，并且及时刷新文件列表信息。
+
+添加本地升级的功能
+
+便签是手机系统的一个工具应用
+
+便签应用新的UI界面和适配工作。
+自定义View如NumberPicker，使其可以自定义字体大小、颜色、位置等属性。
+结合系统的云服务应用，实现便签的云同步功能
+
+
+
+2017-08-22
+
+访问：17394次
+ android:layout_below="@id/layout_menu"
+ 
+手机分辨率：
+https://material.io/devices/
+
+ 
+
+
+
+2017-08-21
+
+测量指示器
+12dp * 22dp
+
+        <activity
+            android:name=".activity.PhotoActivity"
+            android:theme="@style/AppTheme.FullScreen">
+        </activity>
+
+adb logcat | grep "PhotoUtils"
+
+adb logcat | grep "AndroidRuntime"
+
+2017-07-20 doto：
+1. format code UrlUtils。
+2. HttpRequestManager 添加String的get和post。
+
+
+任务完成后，到时间要及时关闭。
+
+holder.itemView.setOnClickListener(new OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    int pos = holder.getLayoutPosition();
+                    mOnItemClickLitener.onItemClick(holder.itemView, pos);
+                }
+            });
+
+			
+			
+http://192.168.7.39:8888/appservice/oauth/token
+
+Content-Type: application/x-www-form-urlencoded
+
+client_id=api-client&client_secret=api&grant_type=password&scope=trust&username=wangming_d3&password=Sxwy!23
+
+2017-08-18
+
+现在的逻辑是，退出时，结束打点，并保存日志文件和图片文件。
+
+日志文件默认存放位置为：
+/storage/emulated/0/cmcc_2017_08_18.csv
+
+图片文件默认存放位置为：
+/storage/emulated/0/tmpImages/cmcc_2017_08_18.jpg
+
+Tracking Area Code, Integer.MAX_VALUE if unknown
+
+TAC
+
+28-bit Cell Identity, Integer.MAX_VALUE if unknown
+
+CI
+
+adb pull /storage/emulated/0/cmcc_2017_08_18.csv .
+
+adb logcat | grep -E "WriteFileUtils|MeasureSignal"
+
+测量实体类：
+
+坐标值：
+x
+y
+
+信号值：
+RSRP
+RSRQ
+SINR
+PCI
+
+
+
+http://111.204.35.214:40031/NOSTool-Group/WenzhouIndoorMeasure
+
+git@111.204.35.214:40031/NOSTool-Group/WenzhouIndoorMeasure
+
+2017-08-16
+
+//魅蓝note3
+0 23 -85 -160 -81 -1 8 99 -117 -117 -16 0 2147483647 cdma 1 1 1 -1
+
+//小米4C
+25 0 -120 -160 -120 -1 -1 99 2147483647 2147483647 2147483647 2147483647 2147483647 gsm|lte
+
+//华为麦芒5 HUAWEI MLA-AL10
+-1 0 -1 255 -95 -115 -1 255 255 11 -114 -14 10 2147483647 2147483647 true gw|lte
+
+-1 0 -1 255 -92 -110 -1 255 255 12 -115 -18 -40 2147483647 2147483647 true gw|lte
+
+    /**
+     * @return string representation.
+     */
+    @Override
+    public String toString() {
+        return ("SignalStrength:"
+                + " " + mGsmSignalStrength
+                + " " + mGsmBitErrorRate
+                + " " + mCdmaDbm
+                + " " + mCdmaEcio
+                + " " + mEvdoDbm
+                + " " + mEvdoEcio
+                + " " + mEvdoSnr
+                + " " + mLteSignalStrength
+                + " " + mLteRsrp
+                + " " + mLteRsrq
+                + " " + mLteRssnr
+                + " " + mLteCqi
+                + " " + mTdScdmaRscp
+                + " " + (isGsm ? "gsm|lte" : "cdma"));
+    }
+
+
+默认第三方apk的安装目录是/data/app/下
+
+其数据文件存放在/data/data/<package_name>下
+
+这两个目录，没有root权限，是无法访问的。
+
+2017-08-15
+
+西安公积金管理中心。
+
+adb logcat | grep -E "MainActivity|PermissionsActivity"
+
+
+
+2017-08-14
+
+adb logcat | grep -E "TelephonyInfo|PermissionsActivity"
+
+git log  --author=<user_name>
+
+
+WenzhouIndoorMeasure
+
+室分智能诊断工具
+
+本周计划：
+
+1. 测试工具模块的功能实现，集成。主要实现获取各个数据，并可以设置打点间隔，可以将数据写入文本文件。(杨少雄)
+2. 加载图纸，并且可以手动在图纸上打点，根据数据值，在图纸上描点画线。需要读取在图纸上的坐标并保存。(杨少雄)
+3. 考虑大图片造成了OOM问题。(杨侃)
+4. 位置定位，调用相机，并且照片带经纬度、时间水印。(杨侃)
+5. 左下角的指南针工具的实现。(杨侃)
+
+
+2017-08-11
+
+
+关于室分智能诊断工具防作弊的手段：@下一秒钟 @侃侃 @丁建朋  下周一会议讨论功能及设计，下周需要二位火力全开，预计我周三去温州，和用户交流。
+1、测试人员到达测试站点外，先要求其进行位置定位，确保其确实已经到达测试点附近。（也可以增加外部环境照片，带时间经纬度水印）。
+2、测试时，各层图纸的坐标系是不同的，测试log就无法进复用，所以测试人员必须每层图纸都要进行打点测试，并且Log数据是自动上传服务器，测试人员不可修改。避免了只测试一次，其他楼层复用log的情况。
+3、测试时，自动记录海拔高度，有楼层海拔对比，避免测试人员在同一层调用不同的楼层图纸进行测试。
+4、测试时，设置不同楼层进行定点拍照，证明测试人员确实到达此楼层。
+5、采用机器学习算法对测试log进行特征分析，找出异常特征Log，作为作弊判断依据。如：两个天线之间的信号强度会呈现又高到低在到高的变化趋势，如果测试人员只在固定位置打点测试，测试log将不会呈现该特征，可以认为其存在作弊嫌疑。
+6、根据以上判断依据，加上人工抽查，可以在心理上对测试人员形成威慑，减小作弊的可能性。
+
+秦网一点通：
+
+1. 欢迎 + 用户名。
+2. 升级，下载Dialog，不可取消。
+3. 关于 + 版本信息。
+
+升级测试，data信息是否保留？done
+
+
+{
+    "downloadLink": "http://192.168.7.8:7777/shaanxi_app_release_1.0.1_20170811160921.apk",
+    "mandatoryUpdate": true,
+    "name": "秦网一点通",
+    "remark": "测试",
+    "versioncode": 2,
+    "versionname": "秦网一点通"
+}
+
+http://localhost:8080/test/update.json
+
+http://192.168.7.3:8080/test/update.json
+
+http://192.168.7.3:8080/test/shaanxi_app_release_1.0.1_20170811094726.apk
+
+陕西，升级，测试app：
+
+app_name: "秦网一点通"
+versionCode 2
+versionName "1.0.1"
+升级信息："测试"
+是否强制升级: 是
+		
+		
+
+http://192.168.7.8:9999/app/AppVersion/GetLatestVersion
+
+1. 服务器地址：可以动态配置。
+
+2. 更新逻辑，放在登录之前还是登录之后？
+
+2017-08-10
+
+Radius协议
+
+        mIvTest.setOnScrollChangeListener(new View.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                Log.d(TAG, "onScrollChange: scrollX: " + scrollX + ", scrollY: " + scrollY
+                        + ", oldScrollX: " + oldScrollX + ", oldScrollY: " + oldScrollY);
+            }
+        });
+
+adb logcat | grep AndroidRuntime
+
+
+todo
+1. 升级服务。
+    1.1 是否强制升级 flag
+	1.2 verion_code
+	1.3 version_name
+	1.4 app_name
+	1.5 upgrade_info
+	1.6 apk_url
+	
+2. 鹰眼图
+图片联动
+
+3. 指南针，小，位于左下角。
+
+BitmapFactory
+
+http://blog.csdn.net/zxw136511485/article/details/51957962
+
+
+
+java写csv文件
+
+用excel打开csv文件，中文乱码，应该使用out.write(title.getBytes("GBK"));即"GBK"编码。
+
+2017-08-09
+
+adb pull /storage/emulated/0/zhongxing.csv .
+
+
+adb logcat | grep -E "TelephonyInfoActivity|WriteFile|MeasureContext"
+
+java 写文本文件
+
+
+HTTP 301与302的区别
+java获取其地址。
+
+杨少雄
+公积金账号：
+3201000341360693
+南京住房公积金管理中心
+
+
+室分点,楼层,X,Y,PCI,RSRP,SINR
+
+需要参数：
+PCI,RSRP,SINR
+
+LTE的KPI指标RSRP，RSRQ，SINR的取值范围：
+RSRP -44dBm ---- -140dBm
+RSRQ  -3dB  ----  -19.5dB
+Sinr  -10dB  ----- 40db 左右
+
+CQI取值范围：
+0~31
+
+
+查看是否支持获取邻区信息：
+*#*#4636#*#*
+
+    /**
+     * A constant holding the minimum value an {@code int} can
+     * have, -2<sup>31</sup>.
+     */
+    public static final int   MIN_VALUE = 0x80000000;
+
+    /**
+     * A constant holding the maximum value an {@code int} can
+     * have, 2<sup>31</sup>-1.
+     */
+    public static final int   MAX_VALUE = 0x7fffffff;
+	
+
+    @Override
+    public String toString() {
+        return ("SignalStrength:"
+                + " " + mGsmSignalStrength
+                + " " + mGsmBitErrorRate
+                + " " + mCdmaDbm
+                + " " + mCdmaEcio
+                + " " + mEvdoDbm
+                + " " + mEvdoEcio
+                + " " + mEvdoSnr
+                + " " + mLteSignalStrength
+                + " " + mLteRsrp//9
+                + " " + mLteRsrq//10
+                + " " + mLteRssnr//11
+                + " " + mLteCqi
+                + " " + mTdScdmaRscp
+                + " " + (isGsm ? "gsm|lte" : "cdma"));
+    }
+	
+1. 
+model: m3 note：
+result.Rsrp: -123 result.Rsrq: -16 result.Rssnr: -40
+SignalStrength: 0 18 -83 -160 -81 -1 8 99 -123 -123 -16 -40 2147483647 cdma 1 1 1 -1
+
+2.
+model: MX5
+result.Rsrp: -112 result.Rsrq: -9 result.Rssnr: 2147483647
+SignalStrength: 21 28 -120 -160 -7 0 -1 99 -112 -9 2147483647 2147483647 gsm|lte 1 1 1 3
+
+
+2017-08-08
+
+adb -s emulator-5554 shell
+
+http://www.gpsspg.com/bs/mnc.htm
+
+http://clients3.google.com/generate_204
+
+http://g.cn/generate_204
+
+2017-08-07
+
+本周任务：
+
+手机信号测量工具的封装，实现获取以下信息：
+
+1. 手机基本信息：包含手机系统，制造商，IMEI等信息。
+2. 手机位置信息，使用百度定位实现。
+3. 手机信号信息，包含服务小区，邻区小区等信息。
+
+http://192.168.100.251/logout.htm
+
+adb logcat -v time | grep -E "TelephonyInfoActivity|MyPhoneStateListener"
+
+http://120.131.10.162:8099/
+
+App/GetRegionCitys?plugin=ShaanXiDemandPlugin
+&regionId=%s
+
+2017-08-04
+
+find demo/ -name "*.js" |wc -l
+
+find /demo -name "*.js" |xargs cat|grep -v ^$|wc -l
+
+find . -name "*.java" |xargs cat|grep -v ^$|wc -l
+
+
+2017-08-03
+
+http://localhost:8080/
+
+    private void showLoadingDialog() {
+        if (mDialog == null) {
+            mDialog = ProgressDialog.show(this, null, getResources().getString(R.string.dialog_loading));
+            mDialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
+                @Override
+                public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        if (mHttpRequestManager != null) {
+                            mHttpRequestManager.cancelRequest(TAG);
+                        }
+                        mDialog.dismiss();
+                    }
+                    return false;
+                }
+            });
+        } else {
+            mDialog.show();
+        }
+    }
+
+    private void dismissLoadingDialog() {
+        if (mDialog != null && mDialog.isShowing()) {
+            mDialog.dismiss();
+        }
+    }
+
+	
+	                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        if (mHttpRequestManager != null) {
+                            mHttpRequestManager.cancelRequest(TAG);
+                        }
+                        mProgressDialog.dismiss();
+                    }
+                    return false;
+2017-08-02
+
+todo
+工单页加上ProgressBar
+
+
+关于Android手机定位：
+现有的Android手机定位一般都是基于第三方SDK（如百度定位），使用GPS，网络定位。一般都是在室外，误差最小在10米。
+而在室内定位，尚未有一个成熟的方案。
+
+Android手机传感器先关：参考 http://blog.csdn.net/smartbetter/article/details/53161452
+
+Android设备传感器主要分为三种：
+1. 动作传感器。主要测量加速度和旋转角度。
+2. 环境传感器。主要测量光线，温度等参数。
+3. 位置传感器。主要包含磁场传感器、方向传感器和邻近传感器。
+
+在我们的需求中，主要是需要两组数据，一组是位置参数，另外一组是信号参数。
+
+信号参数可以使用Android手机自带的API来获取到。
+但是，位置参数，在室内是无法获取到的。使用传感器是能获取到瞬时的加速度，而我们需要的是距离参数，即坐标值，这个在室内的环境下仅仅通过手机设备是无法实现的。这个涉及到室内定位的相关技术，现有的技术都需要外接一个设备，结合已经布置好的环境，得到通过一个数学模型，得到设备的坐标。
+
+stackflow上的相关回答，也表明了，仅仅使用Android手机的传感器，很难做到室内位置的定位。
+参考：
+https://stackoverflow.com/questions/7499959/indoor-positioning-system-based-on-gyroscope-and-accelerometer/7500306#7500306
+
+
+
+ftp测试地址：
+
+ftp://192.168.7.8/
+
+test
+test
+
+2017-08-01
+
+SensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);//陀螺仪
+
+     * <ul>
+     * <li> values[0]: Acceleration minus Gx on the x-axis </li>
+     * <li> values[1]: Acceleration minus Gy on the y-axis </li>
+     * <li> values[2]: Acceleration minus Gz on the z-axis </li>
+     * </ul>
+
+            android:layout_width="@dimen/work_order_img_clear_search_history_width"
+            android:layout_height="@dimen/work_order_img_clear_search_history_height"	 
+	 
+2017-07-31
+
+加班时间：
+2017年5月20日，5月21日。
+
+工单搜索历史
+
+GreenDao no such table 异常
+新建一个表的时候，数据库版本应该加1。
+http://blog.csdn.net/z1020573553/article/details/70170913
+
+2017-07-28
+
+访问：14984次
+
+<activity android:name=".activity.SearchWorkOrderActivity">
+
+picUrl 用分号隔开
+
+如果使用旧的方法：
+public static final String URL_SHAANXI_SECONDARY_OTHER_SCENE = "http://192.168.7.8:9999/"
+            + "appservice/" + "api/SenceMonitor/GetSenceMonitorList" + "?" + "parentId=%s&senceName=%s";
+
+String url = String.format(URL_SHAANXI_SECONDARY_OTHER_SCENE, "-1", "123");
+			
+使用UrlHelper：
+			
+public static final String URL_SHAANXI_SECONDARY_OTHER_SCENE = "http://192.168.7.8:9999/"
+            + "appservice/" + "api/SenceMonitor/GetSenceMonitorList";
+
+UrlHelper urlHelpter = new UrlHelper(URL_SHAANXI_SECONDARY_OTHER_SCENE);
+urlHelpter.appendValue(SceneConstant.REQUEST_PARENT_ID, -1);//SceneConstant.REQUEST_PARENT_ID为"parentId"
+urlHelpter.appendValue(SceneConstant.SEARCH_SECEN_KEYWORD, "123");//SceneConstant.SEARCH_SECEN_KEYWORD为"senceName"
+
+String url = urlHelper.toString();
+
+很明显，使用UrlHelper方法更加清晰，易用，不易出错。
+
+声明
+
+因本人买房需要银行贷款审批，由于入职时间不足一年，所以需要虚开工作年限。我实际入职时间是2017年4月25日，申请虚开入职时间为2016年7月28日，虚开工作年限为1年。
+
+
+2017-07-27
+
+192.168.7.3
+
+ftp://192.168.7.3/
+
+单元测试覆盖率
+
+文件路径权限
+防火墙
+
+
+
+ftp
+
+192.168.7.8
+
+test
+test
+
+
+访问：14906次
+
+http://192.168.7.39:8888/appservice/api/workSheetMain/workSheetMain?page=1&workOrderType=2&name=zhangshaowei
+
+http://192.168.7.39:8888/appservice/api/workSheetMain/workSheetDetail?workid=907089
+
+http://192.168.7.39:8888/appservice/api/workSheetMain/search?search=%E5%AE%89%E5%BA%B7&UserName=zhangshaowei
+
+http://192.168.7.39:8888/appservice/api/workSheetMain/workSheetFlow?workid=907089
+
+
+
+
+
+			
+2017-07-26
+
+访问：14824次
+Expandable + RecyclerView
+1. item 是线性布局的时候，Expandable有时候会展开。但是改为相对布局的时候，就正常了。
+
+http://120.131.10.162:8099/
+
+Demo/YnMap?plugin=ShaanXiDemandPlugin
+
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
+
+	
+Item点击效果：	
+http://www.jianshu.com/p/65d2355feb4b
+
+        <activity
+            android:name=".activity.FlowInfoActivity"
+            android:label="@string/flow_info_title"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+	
+	
+2017-07-25
+访问：14748次
+
+工单：
+username
+zhangshaowei
+
+907089
+
+SparseBooleanArray
+
+com.boco.yunnan.sdk.view.expandablelayout.ExpandableLinearLayout
+
+进度：
+
+杨侃：
+1. 搜索
+2. 场景-拖动 场景：去掉测试的加载页面，实现真实逻辑。
+3. 接口
+
+郭怡枫：
+1. 整体页面逻辑已经完成
+2. 需要各页面集成登录信息
+3. UI调整。
+
+杨少雄：
+1. 工单流转信息，流转信息接口 wait。流转信息UI已经有了。ExpandableLayout
+2. 上传接口，是否已经集成。xiaoqu
+3. 登录接口，仿照陕西秦网优
+
+todo:
+1. 统一actionbar 样式，大小，颜色等。
+2. 工单流转信息接口。
+
+
+
+2017-07-24
+访问：14680次
+
+建议：
+一个项目团队应该包含：
+产品 + 交互 + 设计 + 开发 + 测试
+
+我们现有的完整的只有设计和开发，产品经理的输出真的很少，交互文档和产品文档都需要进一步完善。
+很多的交互逻辑不清晰，导致开发在做具体工作的时候会长时间阻塞，很大程度上影响了工作效率。
+另外，建议后期出了版本之后，由专门的测试人员来对软件进行全面的测试，这样才会暴露出问题来。及时反馈。
+
+总的来说，需要各个项目的角色及时沟通，及时输出。
+
+负责人：王明，需要推动协调各个角色。
+
+评价标准：软件的质量
+
+auth tool
+
+HttpRequestManager
+ShaanxiHttpRequestManager
+
+LoginActivity
+
+todo:
+1. 陕西秦网优，添加登录退出的逻辑。
+
+
+Authorization
+
+
+http://192.168.7.8:6666/appservice/oauth/token
+
+client_id=api-client&client_secret=api&grant_type=password&scope=trust&username=wangming_t3&password=Sxwy!23
+
+Content-Type:application/x-www-form-urlencoded
+
+wangming_d4
+Sxwy!23
+
+client_id=api-client&client_secret=api&grant_type=password&scope=trust&username=zhangshaowei&password=Sxwy!23
+
+网优事业部-移动网优产品线-杨少雄
+
+2017-07-21
+EMS:
+1009392977680
+
+
+
+
+访问：14506次
+todo：
+1. 时间格式化DateUtils.java
+2. ViewPager滑动冲突，禁止左右滑动，但是可以上下滑动。
+3. 水波纹背景颜色
+4. TextView SingleLine与MaxLine
+
+2017-07-20
+访问：14416次
+
+1. 代码review会议
+
+移动网络代码:
+https://baike.baidu.com/item/%E7%A7%BB%E5%8A%A8%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%A0%81?fr=aladdin
+
+{
+        "flag": 0,//0 表示服务小区，1 表示邻区
+        "id": "1",//
+        "sort": 0//0表示GSM，1表示cmda，2表示lte
+    }
+
+
+
+
+
+
+    /**
+     * 服务小区 相关
+     * */
+    //GSM
+    public static final String MCC_GSM = "MCC";
+    public static final String MNC_GSM = "MNC";
+    public static final String LAC_GSM = "LAC";
+    public static final String CID_GSM = "Cid";
+    public static final String SIGNAL_STRENGTH_GSM = "SignalStrength";
+
+    //CDMA
+    public static final String MCC_CDMA = "MCC";
+    public static final String MNC_CDMA = "MNC";
+    public static final String BASE_STATION_ID_CDMA = "BaseStationId";
+    public static final String NETWORK_ID_CDMA = "NetworkId";
+    public static final String SYSTEM_ID_CDMA = "SystemId";
+    public static final String CDMA_RSSI_CDMA = "CdmaRSSI";
+    public static final String CDMA_ECIO_CDMA = "CdmaEcio";
+    public static final String CDMA_LEVEL_CDMA = "CdmaLevel";
+    public static final String EVDO_RSSI_CDMA = "EvdoRSSI";
+    public static final String EVDO_ECIO_CDMA = "EvdoEcio";
+    public static final String EVDO_LEVEL_CDMA = "EvdoLevel";
+    public static final String EVDO_SNR_CDMA = "EvdoSnr";
+
+    //LTE
+    public static final String MCC_LTE = "MCC";
+    public static final String MNC_LTE = "MNC";
+    public static final String PCI_LTE = "PCI";
+    public static final String TAC_LTE = "TAC";
+    public static final String CI_LTE = "CI";
+    public static final String ENB_LTE = "eNB";
+    public static final String CELL_ID_LTE = "CellID";
+    public static final String RSRP_LTE = "RSRP";
+    public static final String RSRQ_LTE = "RSRQ";
+    public static final String SINR_LTE = "SINR";
+
+
+    /**
+     * 邻区信息 相关
+     * */
+
+2017-07-19
+
+访问：14334次
+
+todo:
+1. 上传数据，接口。
+
+2. 集中分析：分页加载。
+上拉刷新加载。
+
+3. UrlHelper 。 (done)
+
+4. 生成UUID，设备标识号。
+
+5. 手机信息，是否确定。key - value
+
+6. 登录，EditText，单行 (done)
+
+
+适配：
+
+小米5S - MUI 8 73.23 - Android 6.0.1
+
+2017-07-18
+访问：14249次
+
+build.gradle格式，
+
+摘要算法。
+
+python learn : 网络编程
+
+
+2017-07-17
+
+访问：14184次
+
+git stash
+git stash pop
+
+todo
+集中分析。
+
+
+本地数据库存储坐标集
+
+glide 4.0 迁移
+http://blog.csdn.net/hexingen/article/details/72578066
+
+
+adb logcat | grep -E "CellDataUtils|GisShow"
+
+2017-07-14
+访问：13936次
+
+EMS
+
+1006106018923
+
+
+1. 本地数据库渲染
+2. IOS简历。
+https://www.zhihu.com/question/19604641
+
+
+
+2017-07-13
+
+访问：13811次
+
+1774378
+1692420
+
+81958
+40978
+
+
+default:
+40978
+
+flag来确认，使用本地数据库小区坐标，还是从网络获取小区坐标。
+
+
+mLeftTopLatLng: latitude: 34.200966919380456, longitude: 108.88063745336991, mRightBottomLatLng: latitude: 34.18149786316289, longitude: 108.89381559520129
+
+longitude：108.88063745 108.89381559
+latitude: 34.18149786 34.20096691
+
+/storage/emulated/0
+
+今日任务：
+1. 根据本地数据库，渲染小区。
+2. 全网，动态。
+3. 场景监控，等客户。
+4. 集中分析（没有规划和参数，只有工单）。
+不处理工单，只显示工单，地市和经过地市的工单，都要呈现。
+流转记录。
+
+
+5. 找站，路径颜色。
+6. 筛选iOS简历，2个
+
+unregisterListener
+
+        // 销毁定位
+        if (locationService != null) {
+
+            locationService.stop();
+        }
+
+
+2017-07-12
+访问：13609次
+
+git pull = git fetch + git merge
+git pull --rebase = git fetch + git rebase
+
+        b.putLong(CommunityConstant.CELL_ID, cellsBean.id);
+        b.putString(CommunityConstant.NE_TECHNOLOGY, cellsBean.netechnology);
+        b.putString(CommunityConstant.NE_GRANULARITY, cellsBean.neType);
+
+		
+		
+
+1. 搜索结果返回时，渲染当前类型小区。
+
+
+
+2017-07-11
+
+todo：
+基站坐标存储到本地数据库。
+
+小屈：
+1. 界面
+
+
+
+https://github.com/XXApple/AndroidLibs
+
+todo
+1. 表格。
+2. Dialog
+
+今日任务：
+1. 小区搜索：返回的时候，渲染周边小区。提供类型选项，现在default是LTE。
+2. 搜索返回结果，添加字段。
+3. 路径规划，取消逐步提醒。
+
++        if (neType.equals(getString(R.string.search_system_type_gsm))) {
++            loadNetworkData(NET_2G);
++        } else if (neType.equals(getString(R.string.search_system_type_td))) {
++            loadNetworkData(NET_3G);
++        } else if (neType.equals(getString(R.string.search_system_type_lte))) {
++            loadNetworkData(NET_4G_D);
++            loadNetworkData(NET_4G_F);
++        }
+
+
+
+2017-07-10
+
+https://github.com/googlesamples/easypermissions
+
+https://github.com/greenrobot/EventBus
+
+
+<activity android:name=".activity.LoginActivity">
++        </activity>
++        <activity android:name=".activity.UserActivity">
+         </activity>
+
+
+访问：13252次
+
+请教一个问题，在ActivityA start ActivityB，会通过intent传递数据。ActivityB是由Fragment组成的，假如有4个Fragment，每个Fragment都要获取从ActivityA传递来的数据，这个数据从哪里获取比较合适？是存在ActivityB中，还是在每个Fragment中getActivity().getIntent()来获取？
+
+        StringRequest request = new StringRequest(
+                Request.Method.POST,
+                url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        LogUtil.d(TAG, "onSuccess, response: " + response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        LogUtil.d(TAG, "onError...");
+                    }
+                }
+        ) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                return paramsMap;
+            }
+        };
+        VolleyController.getInstance(this).addRequest(request, TAG);
+
+28
+
+Base64:key
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=
+
+http://192.168.7.8:8888/appservice/api/login/CheckLogin
+
+http://192.168.7.8:8888/appservice/api/login/CheckLogin?userName=wangming_t1&password=Sxwy!23
+
+
+
+今日任务：
+
+1. 登录
+2. 修改搜索小区传递的参数值。
+3. 适配华为荣耀
+
+
+隐藏百度logo。
+
+
+
+屈垠岑：
+
+1. 学习Android开发规范。(参考我之前发的邮件)
+2. 百度地图，百度定位，初始化动作，能不能放在Application的onCreate中执行。(单例类)
+3. 了解Android 6.0 的动态权限机制，参考谷歌官方推荐的EasyPermissions(https://github.com/googlesamples/easypermissions)，标准化动态请求权限。
+4. 了解Android 7.0 新特性，如FileProvider的使用，可参考这篇文章：http://blog.csdn.net/lmj623565791/article/details/72859156
+
+2017-07-08
+
+密码加密：
+
+Base64
+md5
+
+
+访问：13170次
+
+2017-07-07
+
+    @Override
+    public void onDestroyView() {
+        if (mHttpRequestManager != null) {
+            mHttpRequestManager.cancelRequest(TAG);
+        }
+        if (mWebView != null) {
+            mWebView.destroy();
+            mWebView = null;
+        }
+        super.onDestroyView();
+    }
+
+    @Override
+    public void onDestroyView() {
+        if (mHttpRequestManager != null) {
+            mHttpRequestManager.cancelRequest(TAG);
+        }
+        super.onDestroyView();
+    }
+	
+    @Override
+    protected void onDestroy() {
+        if (mWebView != null) {
+            mWebView.destroy();
+            mWebView = null;
+        }
+        super.onDestroy();
+    }	
+	
+	@Override
+    protected void onDestroy() {
+        if (mHttpRequestManager != null) {
+            mHttpRequestManager.cancelRequest(TAG);
+        }
+        super.onDestroy();
+    }
+
+adb shell monkey -p com.boco.yunnan -v 100
+
+adb shell monkey -p <package_name> -v <event_number>
+
+cancelRequest()
+
+搜索，传递类型参数。
+小区搜索返回后，渲染周边小区。
+
+路径规划：
+1. 路线颜色
+2. 不显示路口提示语
+
+
+链接：http://pan.baidu.com/s/1nuU3TjV 密码：m4on
+
+adb logcat | grep -E "GisShowActivity|SearchCellGisActivity"
+adb logcat | grep -E "GisShowActivity|SearchCellGisActivity|AndroidRuntime"
+
+public LatLng(double latitude,
+      double longitude)
+构造函数
+参数:
+latitude - 纬度
+longitude - 经度
+
+访问：13105次
+
+2017-07-06
+
+规范：
+
+1. 不要将自己的测试代码提交到git库，比如更改程序入口。
+2. 添加第三方库的时候，需要充分调研，一般不要更改其源代码(需要自定义时除外)。
+3. 一个git commit作为一个单独的功能点，或者bug修复，不要多个功能作为一个commit，将commit信息写明确。
+4. 封装公用类的时候，需要充分测试。
+
+Android开发规范参考：http://www.jianshu.com/p/99239b9c1630
+阿里巴巴java开发规范：见附件pdf文件。
+
+
+1. xml布局文件中不要出现常量值，即颜色，大小，字符串，分别放在资源文件colors.xml,dimens.xml,strings,xml中。
+2. Activity中，使用BindView注解来初始化组件，而不用findViewById()，结合AS的插件可以加快开发效率。后期我会封装一个BaseActivity。
+
+
+                Intent intent = new Intent(this, TestMeasureActivity.class);
+                intent.putExtra("gis", true);
+                startActivity(intent);
+
+云南app进度：
+
+登录模块
+gis模块
+
+搜索：
+
+小区搜索
+## 区域搜索
+
+todo：
+收集信息并上传
+后台坐标转换
+
+访问：13040次
+
+2017-07-05
+
+Dialog 在高分辨率手机上的适配。
+
+http://192.168.7.8:8888/appservice/api/login/CheckLogin
+
+http://192.168.7.3/test/json/test_cell_name_search.json
+
+adb logcat -c; adb logcat | grep -E "SearchCellGisActivity|SearchCellResultAdapter"
+
+1. 搜索：
+2. 登录
+
+周报：
+Android团队开发。
+
+
+
+访问：12973次
+
+2017-07-04
+
+INSERT INTO USER (_id,NAME) SELECT _id,NAME FROM USER_TEMP
+
+https://devding.wixsite.com/jianpeng
+
+adb logcat | grep -E "MainActivity|MyApplication|AndroidRuntime"
+
+
+for xiaoqu:
+
+1. 了解使用git基础操作
+2. 熟悉使用网络请求(可参考项目中的代码)
+3. 结合百度地图官方demo，在百度地图上，根据数据划线。百度地图开发：http://lbsyun.baidu.com/index.php?title=androidsdk/sdkandev-download
+
+访问：12922次
+
+2017-07-03
+
+访问：12846次
+
+todo：
+1. 秦网一点通：图表，布局实现。
+2. 云南app，手机点击获取周边信息上报。
+
+Android热修复：
+
+http://techforum-img.cn-hangzhou.oss-pub.aliyun-inc.com/%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%B4%A2Android%E7%83%AD%E4%BF%AE%E5%A4%8D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%866.29b-final.pdf
+
+
+
+2017-06-30
+访问：12648次
+
+    private void routePlanShare() {
+        LogUtil.d(TAG, "routePlanShare start...");
+        //短串分享
+        //利用驾车路线规划检索，获取待分享的驾车规划（具体方法请参考驾车检索规划的介绍）；
+        //创建分享检索实例；
+        BaiduMapUtil.routeShareUrl(
+                ZHONGXING_LATLNG,
+                LUOMA,
+                RouteShareURLOption.RouteShareMode.BUS_ROUTE_SHARE_MODE,
+                mShareUrlSearch);
+    }
+
+http://192.168.7.8:8888/appservice/index.jsp
+
+gson: 
+Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+
+bom
+
+2017-06-29
+访问：12594次
+
+TODO：
+将debug.keystore文件放到git库中，在build.gradle文件中添加依赖即可。--调试也可以使用定位。
+
+public LatLng(double latitude,
+      double longitude)
+构造函数
+参数:
+latitude - 纬度
+longitude - 经度
+
+单元测试：
+
+
+http://192.168.7.3/test/json/GetAdjacentCell.json
+
+http://192.168.7.3/shaanxi/update/update.json
+
+http://192.168.7.3/test/json/test_json.json
+
+http://192.168.7.3/test/json/scene_monitor.json
+
+http://192.168.7.3/test/json/person_object.json
+
+http://192.168.7.3/test/json/contacts.txt
+
+todo：
+
+gson请求，解析失败。
+
+公交路线规划，城市不能为空。
+
+
+
+
+2017-06-28
+
+百度地图事件监听
+http://lbsyun.baidu.com/index.php?title=androidsdk/guide/listener
+
+西安周至秦风渔业
+34.062625
+108.255961
+
+http://lbsyun.baidu.com/index.php?title=androidsdk/guide/buildproject
+-keep class com.baidu.** {*;}
+-keep class vi.com.** {*;}    
+-dontwarn com.baidu.**
+
+百度地图Android SDK提供的所有服务是免费的，接口使用无次数限制。您需申请密钥（key）后， 才可使用百度地图Android SDK。任何非营利性产品请直接使用，商业目的产品使用前请参考使用须知。
+
+百度定位常见问题：
+    <string name="error_code_detail"> 61 ： GPS定位结果\n
+		62 ： 扫描整合定位依据失败。此时定位结果无效。\n
+		63 ： 网络异常，没有成功向服务器发起请求。此时定位结果无效。\n
+		65 ： 定位缓存的结果。\n
+		66 ： 离线定位结果。通过requestOfflineLocaiton调用时对应的返回结果\n
+		67 ： 离线定位失败。通过requestOfflineLocaiton调用时对应的返回结果\n
+		68 ： 网络连接失败时，查找本地离线定位时对应的返回结果\n
+		161： 表示网络定位结果\n
+		162~167： 服务端定位失败\n
+		502：key参数错误\n
+		505：key不存在或者非法\n
+		601：key服务被开发者自己禁用\n
+		602：key mcode不匹配\n
+		501～700：key验证失败\n</string>
+
+访问：12509次
+
+2017-06-27
+
+访问：12432次
+
+只有在我们没有显示声明任何构造方法时java才会为我们提供一个默认的无参构造函数。
+
+._.DS_Store
+
+.DS_Store
+
+2017-06-26
+
+访问：12360次
+
+2017-06-23
+
+访问：12144次
+
+反编译工具：
+jadx
+
+安全评估工具：
+Drozer
+
+下载之前，先检查是否有该文件，有，则删除；然后下载。
+
+2017-06-22
+
+Volley 超时机制
+
+ProgressDialog
+
+
+
+
+文件下载：
+
+https://github.com/lingochamp/FileDownloader
+
+http://192.168.7.3/shaanxi/update/update.json
+
+# 上网未认证，导致json请求异常。
+
+测试机：
+
+华为: 华为P9，荣耀9
+小米：小米5s，小米Note2，红米Note4X
+Oppo：Oppo R9s
+Vivo: Vivo X9
+三星: Galaxy S7，三星 Galaxy A9
+
+
+访问：12074次
+
+2017-06-21
+
+todo：
+从服务器获取版本信息，检测升级。下载apk，升级apk。
+
+http://www.mob.com/
+
+https://github.com/googlesamples/easypermissions
+
+陕西秦网优
+
+boco_2017_shaanxi.jks
+boco2017
+
+boco_2017_shaanxi_alias
+123456
+
+
+https://stackoverflow.com/questions/34039834/the-apk-file-does-not-exist-on-disk
+
+
+https://stackoverflow.com/questions/22459087/android-studio-fails-to-start-app-after-build-when-using-a-timestamp-in-the-name/22460730#22460730
+
+解决方案：
+debug版本不带时间戳。
+访问：11985次
+
+2017-06-20
+
+Android 常用命令：
+http://blog.csdn.net/jiangwei0910410003/article/details/73385819
+
+1. cat
+2. echo/touch
+3. adb shell dumpsys activity top 查看当前应用的 activity 信息
+4. adb shell dumpsys package [package_name] 查看应用信息
+5. adb shell dumpsys meminfo [package_name/pid] 查看指定进程名或者是进程 id 的内存信息
+6. adb shell dumpsys dbinfo [package_name] 查看指定包名应用的数据库存储信息(包括存储的sql语句)
+7. adb shell screencap -p <output_file> 截屏
+8. adb shell screenrecord <output_file> 录屏
+9. adb shell input text [text_content] 输入文本
+
+
+
+安徽APP
+MapActivity4Mobile.java
+activity_gis_basemap_mobile.xml
+
+访问：11904次
+
+1. 图表库 MPAndroidChart
+2. 项目讨论
+
+2017-06-19
+
+访问：11864次
+
+BitmapFactory.decodeFile()
+
+inJustDecodeBounds = true 时，BitmapFactory 获得 Bitmap 对象是 null
+
+## Android 6.0，未动态获取权限时，调用BitmapFactory.decodeFile()会返回false。
+
+2017-06-16
+
+访问：11737次
+
+plan:
+
+1. Android 6.0 7.0新特性
+2. greenDAO学习，数据库版本升级
+
+compile 'com.jakewharton:butterknife:8.6.0'
+annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+
+2017-06-15
+访问：11659次
+
+plan:
+
+1. greenDAO 学习
+2. 云南App，工具模块，获取手机信息。
+3. 安排王鑫，了解地图模块。
+
+
+
+2017-06-14
+
+greenDAO是一个将对象映射到SQLite数据库中的轻量且快速的ORM解决方案。
+greenDAO is a light & fast ORM solution that maps objects to SQLite databases.
+
+ORM - Object Relation Mapping 
+对象关系映射
+
+plan:
+1. 云南app，工具部分功能了解。
+2. 聊聊架构 学习。
+3. 反射，复习。
+
+
+2017-06-13
+
+groovy -v
+
+groovyconsole
+
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+
+2017-06-12
+
+https://github.com/hongyangAndroid/AndroidAutoLayout
+
+② try...catch...finally块中有return返回值的情况
+finally块中虽然改变了value的值，但try块中返回的应该是return之前存储的值。
+
+2017-06-09
+
+adb shell dumpsys notification --noredact
+
+2017-06-08
+
+https://github.com/googlesamples
+
+无法建立计算机与VPN服务器之间的网络连接，因为远程服务器未响应。这可能是因为未将计算机与远程服务器之间的某种网络设备(如防火墙、NAT、路由器等)配置为允许VPN连接。
+
+
+局域网方位apache服务器：
+
+控制面板->系统和安全->Windows防火墙->高级设置->入站规则->新建规则->
+程序->选择程序路径"C:\setup\AppServ\Apache24\bin\httpd.exe"->允许连接->下一步...
+
+
+http://www.2cto.com/os/201203/123953.html
+
+http://192.168.7.3/test/
+
+http://192.168.7.3:80/test/
+
+2017-06-07
+
+C:\setup\tools\dex2jar-2.0
+
+6月6日apk使用反馈：
+  
+    1、“重点基础问题小区推送”“网优问题小区推送"目前平台网络基础问题、网络问题小区，看是否需要改为一致
+    2、小区测试数据关联”“自动关联查询”    小区测试数据关联选择文件是手机本地，能否从服务器关联改栅格或测试数据？  
+    3、针对“找站”“实时参数性能查询”“工参测量”“场景监控”“调用手机端测试软件”“链接到专业的室分管理系统”“照片”“扫码”在网优集成工具？目前点击会闪退。
+    4.能够进行现场说明演示，针对“备品备件管理功能”“无线作业计划”是在集中维护模块？目前该模块点击一直钻取，无法看到相关功能
+    5、模块自定义配置服务这部分内容如何体现？
+    6、里面涉及到的数据是否是现网数据？
+
+2017-06-06
+
+
+http://xsspt.com/index.php?do=login
+
+http://localhost/test/index.php
+
+todo
+动态权限
+
+
+
+2017-06-05
+
+&nbsp;
+
+&#160;
+
+android:paddingBottom="@dimen/weakness_table_item_padding"
+              android:paddingLeft="@dimen/weakness_table_item_padding"
+              android:paddingRight="@dimen/weakness_table_item_padding">
+
+              android:layout_marginLeft="5dp"
+              android:layout_marginRight="5dp"
+              android:paddingBottom="1dp"
+              android:paddingLeft="1dp"
+              android:paddingRight="1dp"
+
+public static List<Integer> mColorList = Arrays.asList(
+            Color.parseColor("#0087fe"),
+            Color.parseColor("#3da1fe"),
+            Color.parseColor("#8ec9ff"),
+            Color.parseColor("#aad7ff"),
+            Color.parseColor("#00ff42"),
+            Color.parseColor("#48fe5d"),
+            Color.parseColor("#8eff8e"),
+            Color.parseColor("#aaffb0"),
+            Color.parseColor("#f608ff"),
+            Color.parseColor("#fe48fc"),
+            Color.parseColor("#f78cff"));
+
+2017-06-02
+
+XML文件中使用View作为背景的时候，注意，View必须大写，即必须是View而不是view。
+
+
+Markdown语法，#后边需要跟空格，在github才能显示正常。
+
+2017-06-01
+
+http://www.jianshu.com/p/2b2bb6be83a8
+
+http://www.jianshu.com/p/ce1d060573ba#
+
+
+android.support.design.widget.TabLayout：
+
+        //指示器下标的颜色
+        app:tabIndicatorColor="@color/red"
+		//选中字体的颜色：
+        app:tabSelectedTextColor="@color/red"
+		//未选中字体的颜色
+        app:tabTextColor="@color/black"
+		//设置指示器下标的高度
+		app:tabIndicatorHeight="4dp"
+
+
+2017-05-31
+
+
+
+2017-05-27
+1. 修复小区分析跳转 crash
+2. format code
+
+Windows : LF will be replaced by CRLF
+
+find ./ -name "*.java" | xargs dos2unix {}
+
+sed -e ‘s/^M//g’
+sed -e ‘s/^M//g’ myfile.txt
+
+git config core.autocrlf true
+git config core.autocrlf false
+
+
+2017-05-26
+
+ParseException: Unknown option '-keepresourcexmlelements'
+解决方法：对于Proguard，不要使用keepresourcexmlelements选项
+
+2017-05-25
+
+android:fitsSystemWindows="true"
+
+
+http://120.131.10.162:8099/Gis/GisIndexRendor?plugin=ShaanXiDemandPlugin&isMainService=false&intId=-6386159449825345229&cellName=%E8%A5%BF%E5%B1%B1%E5%8C%BA%E6%AA%80%E5%AE%AB-LHSQ-012&isAdjacent=true
+
+集中分析改造列表：
+1.超时工单TAB放置第一个
+2.操作-回复功能
+3.操作-现场信息采集（跳转测量信号）
+4.操作-现场拍照（跳转室外勘察）
+5.操作-数据整合推送（跳转报表）
+
+adb uninstall com.boco.yunnan
+
+AppServ
+
+
+2017-05-24
+
+1. 将实体类都移动到entity包下。
+
+todo：
+
+1. 去掉toast
+2. 雷达图背景
+
+扫码：
+
+android:src="@drawable/goback"
+
+
+aTag.addEventListener('click', function(){ //调用android本地方法 blin.CallAndroid("这是点击Web页面后调用Android本地方法"); return false; }, false);
+
+
+
+
+2017-05-23
+
+问题动态掌控-网优问题小区-列表和折线
+http://192.168.7.8:8033/Demo/YnWywtxq?plugin=ShaanXiDemandPlugin
+
+问题动态掌控-重点基础问题-列表和折线
+http://192.168.7.8:8033/Demo/YnZdjcwt?plugin=ShaanXiDemandPlugin
+
+问题动态掌控-小区top筛选
+http://192.168.7.8:8033/Demo/YnXqTop?plugin=ShaanXiDemandPlugin
+
+
+private static final String URL_HOST_RELEASE = "http://120.131.10.162:6666/";
+
+app/build/outputs/apk/
+
+boco_2017_yunnan_test.jks
+
+
+
+
+boco_2017_yunnan_test.jks
+
+password:boco2017
+
+Alias:
+boco_test_alias
+passwrod:123456
+
+对应SH1
+7D:35:79:8D:D4:A0:A5:DC:3F:7D:02:3F:16:E1:C7:FC:BE:6B:28:EE
+
+todo:
+
+混淆：
+忽略第三方库。
+
+keytool -list -v -keystore 你的jks名称 
+
+
+1. 首页UI图实现
+
+-libraryjars libs/baidumapapi_v2_1_2.jar (替换成自己所用版本的jar包)
+-keep class com.baidu.** { *; }
+-keep class vi.com.gdi.bgl.android.**{*;}
+
+
+
+gradle assembleRelease
+
+//这个是打包所有渠道release版本 
+./gradlew assembleRelease
+
+//如果你只要打某个渠道的 
+./gradlew assembleBaiduRelease
+
+./gradlew assembleRelease --stacktrace
+
+apk位置：
+
+app–>build–>outputs—>apk
+
+
+2017-05-22
+
+fragment的生命周期，切换
+
+
+聊聊架构
+
+
+今日目标：
+
+1. 短板整治
+2. 动态掌控
+3. 工具集成
+
+todo
+HealthFragment，loadData结束时，如果不在该fragment，则会发生crash，
+initHealthRadarChartView(HealthFragment.java:198)
+
+URL：
+
+全网综合呈现-短板整治
+http://192.168.7.8:8033/App/GetQwzhzxDbzz?plugin=ShaanXiDemandPlugin&regionId=-1494943961
+
+问题动态掌控：数据
+http://192.168.7.8:8033/App/GetWqxqQx?plugin=ShaanXiDemandPlugin
+
+问题动态掌控-重点基础问题-地图
+http://192.168.7.8:8033/Demo/YnZdjcwtMap?plugin=ShaanXiDemandPlugin
+
+问题动态掌控-网优问题小区-地图
+http://192.168.7.8:8033/Demo/YnWywtxqMap?plugin=ShaanXiDemandPlugin
+
+GIS：
+http://192.168.7.8:8033/Gis/GisIndex?plugin=ShaanXiDemandPlugin
+
+private static final List<String> mChartViewTitles =
+            Arrays.asList("干扰小区", "闭锁小区", "零业务小区", "业务陡降小区", "故障小区", "降功率小区");
+			
+private static final List<String> mChartViewTitles =
+            Arrays.asList("无线接通率低小区", "VOLTE劣化小区", "高负荷小区");
+
+
+
+2017-05-21
+
+    private void loadData() {
+        LogUtil.d(TAG, "loadData");
+        clearData();
+
+        loadHealthData();
+
+        initViewPager();
+    }
+
+    private void clearData() {
+        LogUtil.d(TAG, "clearData");
+        mRadarDatas.clear();
+        mPieDatas.clear();
+        mLineDatas.clear();
+        mLineChartLayouts.clear();
+
+    }
+
+1. 雷达图，封装
+
+
+2017-05-20
+
+adb logcat -v time | grep AndroidRuntime
+
+bar chart  柱状图
+pie chart 饼状图
+
+
+2017-05-19
+
+    public static <T> T JsonToObject(String json, Class<T> type) {
+        Gson gson = new Gson();
+        return gson.fromJson(json, type);
+    }
+
+    public static String getJson(Context context, String fileName) {
+        StringBuilder stringBuilder = new StringBuilder();
+        //获得assets资源管理器
+        AssetManager assetManager = context.getAssets();
+        //使用IO流读取json文件内容
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
+                    assetManager.open(fileName), "utf-8"));
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuilder.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return stringBuilder.toString();
+    }
+
+点击效果：
+android:background="?android:attr/selectableItemBackground"
+
+android:background="?android:attr/selectableItemBackgroundBorderless"
+
+2017-05-19
+
+1. 折线图数据格式
+2. WebView与android的交互
+
+
+2017-05-18
+
+1. 登录页面
+2. 工具箱，集成百度地图，添加百度key
+3. 综合详情页面
+
+2017-05-17
+
+git培训
+
+主分支master
+开发分支 develop-
+临时分支 feature-*
+预发布分支release-*
+
+
+
+find ./ -name "*.java" | xargs dos2unix {}
+
+
+
+
+账上运维app
+http://218.200.48.73:8889/bmdpnew/downloadForward.jsp
+
+用户名：18792611961
+密码：18792611961
+
+集中分析，可以参考账上运维。
+
+
+
+
+2017-05-16
+
+账上运维，故障工单统计
+com.chinamobile.sx.wos/.statistics.ui.newfault.FaultMainActivity
+
+KJFrameForAndroid
+https://github.com/kymjs/KJFrameForAndroid
+
+今日计划：
+
+1. 云南app，实现首页布局。
+
+
+2017-05-15
+
+doto：
+
+云南app集成网优宝
+
+netstat -ano | findstr ":445"
+
+2017-05-12
+todo:
+
+1. BaseActivity的封装
+2. Fragment的管理实现
+3. 集成网优宝
+
+账上网优：
+
+链接: https://pan.baidu.com/s/1qYFcass 密码: febh
+
+安卓简历：
+
+04 刘伟强
+08 张建辉
+12 周亚斌
+
+
+
+com.boco.mobile.bwno.procell.activity.ProCellFragmentActivity
+ProCellFragmentActivity
+
+bwno_chart_listmain.xml
+
+com.boco.commonui.pullandloadmorelistview.view.PullAndLoadMoreListView
+
+./com/boco/mobile/bwno/procell/adapter/ProCellDetailFragmentAdapter.java
+
+
+1. 
+ProCellListAdapter
+bwno_procell_list_item = 2130968632
+
+问题小区列表
+
+2.
+ProCellDetailFragmentAdapter
+对应PullAndLoadMoreListView
+bwno_chart_list = 2130968622
+
+内部类：
+ProCellDetailFragmentAdapter.AreaDataAdapter
+问题小区Fragment数据列表Adapter
+对应Item
+ bwno_chart_list_item = 2130968623;
+
+3. 
+ProCell4GDetailFragment
+bwno_chart_listmain = 2130968624;
+
+问题小区 Fragment->4G
+
+
+
+
+
+2017-05-10
+
+使用View.setId的正确姿势：
+http://www.cnblogs.com/codingblock/p/5090441.html
+
+2017-05-09
+
+空间指标
+时间指标
+
+钻取：下一级表
+
+云南APP需求讨论：
+
+deadline: 5月底
+
+评估难度，时间，工作量。
+
+1. UI设计图，
+2. 照片环拍，全景照片。
+    板件照片，
+	扫码，板件出入库。
+	
+	
+3. 集中维护
+    备品备件管理
+
+三个系统
+一个工具
+
+
+
+
+
+
+
+
+
+
+#Android统计图表
+
+AChartEngine：
+
+
+MPAndroidChart：
+https://github.com/PhilJay/MPAndroidChart
+
+XCL-Charts：
+https://github.com/xcltapestry/XCL-Charts
+
+xUtils:
+
+云南APP：
+
+Android & IOS
+
+服务内容：
+(除特殊说明，需要支持Android和IOS)
+
+1. 全网综合呈现
+    1.1 综合呈现内容
+	    1.1.1 全省网络综合评估呈现 -- (网络概况)
+		1.1.2 重点工作呈现。(赛马专项？)
+		1.1.3 地市短板呈现
+		1.1.4 集中网优工作完成情况呈现
+	1.2 全网综合呈现样表
+	
+
+2. 网络问题动态掌控
+    2.1 呈现内容
+	    2.1.1 重点基础问题小区推送
+		2.1.2 网优问题小区推送
+		
+	2.2 呈现样表
+
+3. 综合GIS功能
+    3.1 图层管理
+	3.2 小区信息一键钻取
+	3.3 小区测试数据关联
+	3.4 自动关联查询
+	
+
+4. 应用工具箱(网优工具箱)
+    4.1 找站
+	4.2 实时参数性能查询
+	4.3 工参测量(至少支持Android)
+	4.4 场景监控
+	4.5 可以调用手机端测试软件，呈现测试log及评估情况。(什么测试软件？)
+	4.6 在GIS地图上，点开室分小区，可链接到专业的室分管理系统中，对该室分小区详细情况进行查询及呈现。
+	4.7 照片：站点照片环拍&板件照片收集
+	4.8 扫码：板件出入库扫描
+
+5. 集中分析流程前端化
+
+6. 集中维护功能前端化
+
+7. 模块自定义配置服务
+
+
+
+s///
+
+反编译工具下载：
+
+
+apktool: https://bitbucket.org/iBotPeaches/apktool/downloads/
+
+dex2jar: https://sourceforge.net/projects/dex2jar/
+
+jd-gui: http://jd.benow.ca/
+
+server.properties
+```
+#BMDP_SERVER=http\://123.124.236.212\:9999/bmdp/service
+#chengdu
+#BMDP_SERVER=http\://123.124.236.212\:9998/bmdp/service
+#sichuan
+#BMDP_SERVER=http://223.86.3.12:9998/bmdp/service^M
+#jiangxi
+#BMDP_SERVER=http://211.138.219.92:8090/bmdp/service
+#jiangxi
+#heilongjiang
+#BMDP_SERVER=http://111.40.226.79:8080/bmdp/service
+#hubei
+#BMDP_SERVER=http://120.202.255.78:9998/bmdp/service
+#sxi
+#BMDP_SERVER=http://218.200.48.73:9100/bmdp/service
+#tianjin
+#BMDP_SERVER=http://211.103.81.58:8080/bmdp/service
+#jilin
+#BMDP_SERVER=http://111.26.17.73:8989/bmdp/service
+#anhuidianxin
+#BMDP_SERVER=http://61.191.42.134:12222/bmdp/service
+#anhui
+BMDP_SERVER=http://120.210.236.82:9998/bmdp/service
+#shanghai
+#BMDP_SERVER=http://117.185.3.242:9998/bmdp/service
+```
+
+掌上网优APP接口：
+
+获取更新信息：
+
+http://120.210.236.82:9998/mcUpdate/getlatestver
+
+
+upload
+http://120.210.236.82:9998/bmdp/UploadFileServlet
+
+
+
+common：
+
+
+
+
