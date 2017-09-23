@@ -20,7 +20,8 @@ def tcplink(sock, addr):
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # 监听端口
-server_addr = '127.0.0.1'
+# server_addr = '127.0.0.1'
+server_addr = ''
 server_port = 9999
 s.bind((server_addr, server_port))
 s.listen(5)
