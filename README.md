@@ -6,3 +6,4 @@
 
 [Tensorflow 学习笔记]( https://github.com/YoungBear/LearningNotesYsx/blob/master/tensorflow/README.md )
 
+[Ruby 学习笔记](https://github.com/YoungBear/LearningNotesYsx/blob/master/ruby/README.md)
