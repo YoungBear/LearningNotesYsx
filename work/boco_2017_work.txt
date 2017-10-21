@@ -1,4 +1,4 @@
-﻿你好
+你好
 http://192.168.100.251/webAuth/index.htm?go.microsoft.com/fwlink/?LinkID=219472&clcid=0x409
 
 13681682771
@@ -10,6 +10,10 @@ username：
 wengyifan
 password:
 123456
+
+wifi验证：
+yangshaoxiong
+boco2017ysx
 
 boco-office
 bocoxayfzx@6789
@@ -32,6 +36,7 @@ local.properties
 .DS_Store
 build
 captures
+*.apk
 
 AndroidStudio  常见问题：
 
@@ -129,6 +134,429 @@ http://www.wunderground.com/history
 
 mysql root 密码：123456
 
+2017-10-21
+访问：23030次
+
+ViewPager和RecyclerView滑动冲突。
+
+RecyclerView高度为match_parent时，显示不出来。
+
+云南app，上传周边环境。接口不正确。
+
+http://api.map.baidu.com/place/v2/suggestion?query=%E5%A4%A9%E5%AE%89%E9%97%A8&region=%E5%8C%97%E4%BA%AC%E5%B8%82&city_limit=true&output=json&ak=APG6bK9eem1tqSNOaQHX1imfvaCYLG1u&mcode=84:3D:AA:CE:CB:9C:8E:BA:EC:87:AE:43:A2:DC:8E:72:3A:1B:49:A0;com.boco.yunnan
+
+http://api.map.baidu.com/place/v2/suggestion?query=天安门&region=北京市&city_limit=true&output=json&ak=0VQxShmVmH8iZicrFvXq1FsbAmr7h3vT
+
+http://api.map.baidu.com/place/v2/suggestion?query=天安门&region=北京市&city_limit=true&output=json&ak=APG6bK9eem1tqSNOaQHX1imfvaCYLG1u
+
+2017-10-20
+
+访问：22872次
+https://isux.us/demoo/project/20170927/15065070281h3c1d/?_wv=131076&time=1508490473499
+
+2017-10-19
+访问：22785次
+
+集中分析，小区分析。
+
+ic_maintain_manage_chart
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:angle="90"
+        android:endColor="@color/maintain_manage_chart_bg_end_color"
+        android:startColor="@color/maintain_manage_chart_bg_start_color" />
+
+</shape>
+
+angle代表颜色变化的方向，只能是45的倍数。
+当angle=0时，渐变色是从左向右。 然后逆时针方向转，当angle=90时为从下往上。
+0代表从left到right。
+90代表从bottom到top。
+270代表从top到bottom。
+
+测距
+DistanceUtil
+public class DistanceUtil {
+    public DistanceUtil() {
+    }
+
+    public static double getDistance(LatLng var0, LatLng var1) {
+        if(var0 != null && var1 != null) {
+            Point var2 = CoordUtil.ll2point(var0);
+            Point var3 = CoordUtil.ll2point(var1);
+            return var2 != null && var3 != null?CoordUtil.getDistance(var2, var3):-1.0D;
+        } else {
+            return -1.0D;
+        }
+    }
+}
+
+2017-10-18
+访问：22703次
+
+swagger ui
+
+https://isux.us/demoo/project/20170927/15065070281h3c1d/?_wv=131076&time=1508316692938
+
+&access_token=7b1559d6-adfc-4953-b11e-a8334ca80850
+
+https://isux.us/demoo/project/20170927/15065070281h3c1d/?_wv=131076&time=1508231027
+
+2017-10-17
+访问：22602次
+configChanges
+
+http://120.131.10.162:8090/appservice/api/upload/fileInformation?userName=齐天大圣
+
+2017-10-16
+访问：22524次
+
+http://183.224.28.129:8091/
+
+adb logcat | grep GsonRequest
+
+git config --local user.name "develop_yang"
+git config --local user.email "develop_yang@yeah.net"
+
+云南app：
+http://183.224.28.129:8091/
+
+hantaishan
+Password123#
+
+
+2017-10-13
+访问：22216次
+
+bearer=0056cf33-232e-4f55-a939-55a0ad7f0cad
+
+http://192.168.7.18:8888/appservice/api/centralize/workSheetMain?workOrderType=2&page=1&name=lvyue&access_token=0056cf33-232e-4f55-a939-55a0ad7f0cad&Num=20
+
+
+Calendar
+add(f, delta) 将 delta 添加到 f 字段中。这等同于调用 set(f, get(f) + delta)
+
+2017-10-12
+访问：22134次
+
+http://192.168.7.19:8080/ServletLearn/upload.jsp
+http://192.168.7.19:8080/ServletLearn/PageRedirect
+http://192.168.7.19:8080/ServletLearn/PageHitCounter
+
+
+Servlet 菜鸟学习笔记
+
+javac 编译时报"编码GBK的不可映射字符"
+javac -encoding UTF-8 HelloWorld.java
+
+git config --local user.name "develop_yang"
+git config --local user.email "develop_yang@yeah.net"
+
+tomcat中文乱码：
+useBodyEncodingForURI="true"
+
+2017-10-11
+访问：22034次
+
+:%s/^M//g
+
+菜鸟
+
+mysql
+
+mysql -u root -p
+
+show databases;
+use test;
+show tables;
+
+
+create database RUNOOB;
+use RUNOOB;
+CREATE TABLE `websites` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` char(20) NOT NULL DEFAULT '' COMMENT '站点名称',
+  `url` varchar(255) NOT NULL DEFAULT '',
+  `alexa` int(11) NOT NULL DEFAULT '0' COMMENT 'Alexa 排名',
+  `country` char(10) NOT NULL DEFAULT '' COMMENT '国家',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+INSERT INTO `websites` VALUES ('1', 'Google', 'https://www.google.cm/', '1', 'USA'), ('2', '淘宝', 'https://www.taobao.com/', '13', 'CN'), ('3', '菜鸟教程', 'http://www.runoob.com', '5892', ''), ('4', '微博', 'http://weibo.com/', '20', 'CN'), ('5', 'Facebook', 'https://www.facebook.com/', '3', 'USA');
+
+新建用户bearyang并且在任意地址授予所有权限，并设置口令为123456
+mysql> grant all privileges on *.* to 'bearyang'@'%' identified by '123456' with grant option;
+
+查看所有用户
+SELECT User, Host FROM mysql.user;
+
+
+http://192.168.7.19:8080
+http://192.168.7.19:8080/test.jsp
+
+http://192.168.7.19:8080/TomcatTest/HelloForm?name=菜鸟课程&url=www.runoob.com
+
+  <servlet>
+      <!-- 类名  -->
+      <servlet-name>HelloWorld</servlet-name>
+      <!-- 所在的包 -->
+      <servlet-class>HelloWorld</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+      <servlet-name>HelloWorld</servlet-name>
+      <!-- 访问的网址 -->
+      <url-pattern>HelloWorld</url-pattern>
+  </servlet-mapping>
+
+2017-10-10
+
+访问：21946次
+
+反馈：
+1. 关于反作弊系统不是很有用
+现有定位只能获取到经纬度，海拔信息误差很大(50m左右)，所以无法对应定位到具体楼层。
+另外，一般情况下，如果在同一位置，定位的结果是不会变的，但是用户提供的结果显示，第一次定位结果是中国浙江省温州市鹿城区新城大道284号，经纬度为Lat:28.008816,Lon：120.710308。第二次定位结果是中国浙江省温州市鹿城区万源路875号，经纬度为Lat:28.007752，Lon:120.712521。这两个位置的距离有300米左右。初步判断这两个不是在同一地点测量的。
+
+
+2. PCI信息有误
+获取PCI等测量信息，跟手机硬件本身，系统版本，厂商，所处的环境均有关系。
+其中，PCI获取为0，可认为该手机获取当前PCI失败。
+
+3. 图纸不能自由放大缩小
+一般情况下，测量使用的图纸都是从服务器上下载下来的，这些图纸都是统一的。
+现在在手机上显示的图片大小是显示原图片的大小，即如果图纸是1920*1080px的，则在1920*1080分辨率的手机上，刚好占满屏幕。由于图纸的大小是确定的，在不同分辨率的手机上，可能显示的状态就不一样。
+如果需要进行精确的操作，就可以事先将图纸放大后，放在服务器上面，这样用户使用的图纸就可以满足精确的操作。
+现有的操作方式是用户可以作用拖动来进行平移操作，还有一种可行的方案是类似于图库的图片显示的那种操作方式，即用户可以手动放大和缩小，不过这样交互起来会和打点动作冲突。
+
+
+28.008816,120.710308
+28.007752,120.712521
+
+LatLng center = new LatLng(28.008816, 120.710308);
+float zoom = 15.0f; // 默认 11级
+
+
+
+1. 日志收集:统计手机版本信息。
+2. 内存不够时，MainActivity的onDestroy()会调用，会stopLocation().
+
+
+android:configChanges="orientation|screenSize"
+
+ProgressDialog vs DialogFragment
+
+2017-10-09
+访问：21765次
+
+android:background="@drawable/activity_recycler_view_item_bg"
+
+useradd -r -m -s /bin/bash bearyang
+passwd bearyang
+
+
+update-alternatives --config editor
+
+2017-09-30
+
+访问：21122次
+
+2017-09-29
+
+
+访问：21017次
+
+git tag "APP-RNOP-CQT-1.0.1-2017.09.29"
+
+git push origin --tags
+
+
+
+
+RecyclerView 异步加载图片，混乱。
+
+有两个问题
+1. 并行测试，同时访问多个网站的时候，会导致
+
+http://www.youku.com/
+
+http://www.tudou.com/
+
+http://www.tianya.cn/
+
+http://www.xunlei.com/
+
+
+2017-09-28
+
+访问：20901次
+
+网页浏览成功率WSR 得分
+
+网页浏览成功率WSR = 页面响应成功率 × 页面显示成功率
+
+页面显示成功率 = 页面内容下载成功次数 /（页面内容下载成功次数 + 页面内容下载失败次数）* 100%
+
+页面响应成功次数:
+
+通过监测Webview的进度，评估页面接入成功。接入成功,则记录为1否则为0。此项指标记录多次响应成功累加次数。
+
+页面响应成功：终端收到服务器返回的成功应答消息（如200 OK）；
+对于单条记录为页面响应是否成功的标志，从用户输入URL到终端收到HTTP 200 OK的时延超时（30s超时）,则记录为0否则为1。此项指标记录多次响应成功累加次数。
+
+关于页面响应成功次数这项指标，我们实际上获取的时候，一次性并行同时访问多个网络地址，还是一个一个穿行访问这个网络列表？
+
+另外，是访问哪些网站？我们是否有个网站列表？
+     		
+
+
+
+Usage: logcat [options] [filterspecs]
+
+adb logcat -b radio > radio.log
+
+
+2017-09-27
+
+访问：20782次
+
+会议：
+
+# 进度
+1. 室内打点 ：优化逻辑。需要讨论，产品逻辑等。todo: 登录，升级等逻辑。(需要后台接口) 
+动态区分debug版本和release版本服务器地址。(getProp，但是有安全风险)
+license：方案：
+注册。邀请码。第一批内置系统。
+
+删点
+图纸修改
+室内定位算法：
+
+2. 云南掌上网优APP：代码优化。todo: 升级逻辑。需要后台提供接口。
+3. 机器人：已经完成综合覆盖率cMOS得分，todo：呼叫，语音，视频，网络。(难度) 可以先做网络指标。
+
+节前完成网络kpi。
+
+登录：
+token
+超时策略。
+失效策略。
+
+todo:
+1. 集中分析：分页加载
+
+Calendar.add();
+http://blog.csdn.net/l1585931143/article/details/53561314
+
+git:
+
+http://www.ruanyifeng.com/blog/2014/06/git_remote.html
+
+
+git fetch -p
+
+
+java.lang.Integer.MAX_VALUE
+2^31 - 1
+0x7fffffff
+2147483647
+
+代码review整理：
+
+1. 不要使用包装类：
+http://10.10.2.143/NOSTool-Group/WenzhouIndoorMeasure/merge_requests/57
+
+基本类型和装箱基本类型
+
+1.1 基本类型只有值，而装箱基本类型则具有与它们的值不同的同一性。换句话说，两个装箱基本类型可以具有相同的值和不同的同一性。
+1.2 基本类型只有功能完备的值，而每个装箱基本类型除了它对应基本类型的所有功能值之外，还有个非功能值：null。
+1.3 基本类型通常比装箱基本类型更节省时间和空间。
+
+
+
+
+2. MonthUtils
+
+http://10.10.2.143/Android-Group/YunnanMobileApp/commit/6fdea2afc81f351549c8c91ccc014fa71aae4a43
+
+3. 使用静态方法startActivity。
+
+PermissionsActivity
+
+PhotoActivity
+
+4. 观察者模式。
+
+
+代码Review:
+
+
+
+
+
+swaggerUI
+
+baidu echarts
+
+
+
+
+
+图片 Base64编码，上传。断电续传。服务器支持。
+
+层三信令适配主流芯片：高通芯片、海思芯片、MTK芯片等
+
+A.      举证应标厂家有能力完成技术规范书中描述的相关终端芯片平台解码能力
+B.       举证应标厂家有能力独立开发技术规范书中描述的相关数据管理平台能力
+C.       其他能力举证证据。
+
+
+
+2017-09-26
+访问：20676次
+
+综合覆盖率：
+
+sed -i "s/原字符串/新字符串/g" `grep 原字符串 -rl 所在目录`
+
+sed -i "s/mipmap/drawable/g" `grep mipmap -rl .`
+
+
+状态	货物正在运输	2017年9月26日
+预计交付	2017年9月28日
+承运商	S.F. EXPRESS
+跟踪号	960110034360
+送货服务	标准送货
+
+2017-09-25
+访问：20607次
+
+tomcat:
+
+Failed to destroy end point associated with ProtocolHandler
+tomcat启动时两个工程都检测了。同一时刻tomcat只能启动一个项目。
+
+http://10.174.238.142:8888/
+
+2017-09-23
+
+http://47.95.249.79:8080/simple1.cgi
+
+规范：
+1. 颜色值
+2. 尺寸值
+3. 字符串值
+不要直接写在布局文件xml或者style、selector、bg、shape等文件中。
+而应该将色值写在colors.xml中；
+将尺寸大小写在dimens.xml文件中；
+将字符串写在strings.xml文件中。
+然后在需要引用的地方引用他们。
+这样，我们才能做好适配更多的手机的第一步。
+
+throw new UnsupportedOperationException("u can't instantiate me...");
+
 2017-09-22
 访问：20371次
 todo：
@@ -176,6 +604,12 @@ getString(R.string.upload_percent_format, 50)
 <string name="upload_percent_format">已上传%d%%</string>
 
 2017-09-21
+
+net start mysql
+
+
+mysql -uroot -p
+
 
 mysql：
 show databases;
