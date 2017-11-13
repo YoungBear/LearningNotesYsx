@@ -90,3 +90,13 @@ global 最根本的作用是作为全局变量的宿主。按照 ECMAScript 的�
 - `clearInterval(t)` 全局函数， 用于停止一个之前通过 setInterval() 创建的定时器。
 - `console` 控制台标准输出。
 - `process` 用于描述当前Node.js 进程状态的对象，提供了一个与操作系统的简单接口。
+
+
+##  常用工具
+
+- `util.inherits(constructor, superConstructor)` 实现对象间原型继承 的函数
+- `util.inspect` 将任意对象转换 为字符串
+- `util.isArray(object)` 如果给定的参数 "object" 是一个数组返回true，否则返回false。
+- `util.isRegExp(object)` 如果给定的参数 "object" 是一个正则表达式返回true，否则返回false。
+- `util.isDate(object)` 如果给定的参数 "object" 是一个日期返回true，否则返回false。
+- `util.isError(object)` 如果给定的参数 "object" 是一个错误对象返回true，否则返回false。
