@@ -100,3 +100,25 @@ global 最根本的作用是作为全局变量的宿主。按照 ECMAScript 的�
 - `util.isRegExp(object)` 如果给定的参数 "object" 是一个正则表达式返回true，否则返回false。
 - `util.isDate(object)` 如果给定的参数 "object" 是一个日期返回true，否则返回false。
 - `util.isError(object)` 如果给定的参数 "object" 是一个错误对象返回true，否则返回false。
+
+## RESTful API
+
+REST即**表述性状态传递**（英文：Representational State Transfer，简称REST）是Roy Fielding博士在2000年他的博士论文中提出来的一种**软件架构风格**。
+
+表述性状态转移是一组**架构约束条件和原则**。满足这些约束条件和原则的应用程序或设计就是RESTful。需要注意的是，REST是设计风格而不是标准。REST通常基于使用HTTP，URI，和XML（标准通用标记语言下的一个子集）以及HTML（标准通用标记语言下的一个应用）这些现有的广泛流行的协议和标准。REST 通常使用 JSON 数据格式。
+
+### HTTP 方法
+以下为 REST 基本架构的四个方法：
+
+- `GET` - 用于获取数据。
+- `PUT` - 用于更新或添加数据。
+- `DELETE` - 用于删除数据。
+- `POST` - 用于添加数据。
+
+## 多进程
+
+Node 提供了 child_process 模块来创建子进程，方法有：
+
+- exec - `child_process.exec` 使用子进程执行命令，缓存子进程的输出，并将子进程的输出以回调函数参数的形式返回。
+- spawn - `child_process.spawn` 使用指定的命令行参数创建新进程。
+- fork - `child_process.fork` 是 spawn()的特殊形式，用于在子进程中运行的模块，如 fork('./son.js') 相当于 spawn('node', ['./son.js']) 。与spawn方法不同的是，fork会在父进程与子进程之间，建立一个通信管道，用于进程之间的通信。
