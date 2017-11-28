@@ -47,11 +47,19 @@ JUnit 中的最重要的程序包是 junit.framework 它包含了所有的核心
 
 JUnit 执行过程：
 
-- beforeClass() 方法首先执行，并且只执行一次。
-- afterClass() 方法最后执行，并且只执行一次。
-- before() 方法针对每一个测试用例执行，但是是在执行测试用例之前。
-- after() 方法针对每一个测试用例执行，但是是在执行测试用例之后。
-- 在 before() 方法和 after() 方法之间，执行每一个测试用例。
+- @BeforeClass 方法首先执行，并且只执行一次。
+- @AfterClass() 方法最后执行，并且只执行一次。
+- @Before() 方法针对每一个测试用例执行，但是是在执行测试用例之前。
+- @After() 方法针对每一个测试用例执行，但是是在执行测试用例之后。
+- 在 @Before() 方法和 @After() 方法之间，执行每一个测试用例。
+
+**注意**：
+
+**@BeforeClass** 和 **@AfterClass** 修饰的方法必须是<font color=red>**静态的**(static)</font>。否则就会报错：
+
+```
+java.lang.Exception: Method xxx should be static
+```
 
 ## 执行测试
 
