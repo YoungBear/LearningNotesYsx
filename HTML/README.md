@@ -187,3 +187,115 @@ font标签用于给文本设置文字大小和颜色等属性。示例如下：
 | 8       |  sub   |  下标   |
 | 9       | span   | 文本处理 |
 | 10      | font   | 字体处理 |
+
+## 3. HTML语义标签
+
+在讲这类标签之前，我们先来聊聊标签的语义化。 
+
+HTML5标签语义化的目的：**让程序员(甚至是非IT人士)能够直观地认识到标签及其属性的用途和作用**。比如，当我们看到h1~h6时就知道：这个标签是用来显示标题的。当然，语义化还有其他非常重要的作用。通过语义化标签可以让爬虫，搜索引擎，SEO读懂我们的页面。比如，我们利用HTML5开发一款新闻朗读软件给盲人朋友用，如果我们把重点内容放入strong标签中，那么该内容会被重读从而突出重点。
+
+### 3.1 blockquote 标签
+
+blockquote用于表示<font color=red>**文本的引用**</font>。引用的文本会在**左、右两侧同时缩进**。
+
+```
+<blockquote cite="http://blog.csdn.net/next_second/article/details/78407931">GreenDAO是一个开源的Android端ORM(Object Relational Mapping 对象关系映射)框架，可以让用户使用Java方法来做增删改查等动作。。</blockquote>
+```
+
+### 3.2 cite标签
+
+cite标签用于表示文本对某个参考文献的<font color=red>**引用**</font>，比如书籍或者杂志的标题。
+
+```
+这段话出自<cite>《java编程思想》</cite>
+```
+
+### 3.3 address标签
+
+address标签用于表示<font color=red>**地址**</font>，显示效果通常为斜体。
+
+```
+<address>中国四川省成都市高新区</address>
+```
+
+### 3.4 code标签
+
+code标签用于表示<font color=red>**计算机代码**</font>。
+
+```
+<code>system.out.println()</code>
+```
+
+### 3.5 var标签
+
+var标签用于表示<font color=red>**变量**</font>。
+
+```
+<var>count</var>
+```
+
+### 3.6 dfn标签
+
+dfn标签用于<font color=red>**定义专业术语**</font>，它源于短语defining instance。
+
+```
+<dfn>量子网络通信</dfn>
+```
+
+### 3.7 del标签
+
+del标签用于表示<font color=red>**删除**</font>，在该标签中的文本会被画一条横线。
+
+```
+<del>该方法已经废弃</del>
+```
+
+### 3.8 pre标签
+
+pre标签表示<font color=red>**预先的格式化**</font>，它源自于英语单词preformatted，该标签中的空格，回车等格式字符都会被保留。
+
+```
+<pre>
+        <p>       第一行文字</p>
+
+
+        <p>第二行文字</p>
+</pre>
+```
+
+### 3.9 mark标签
+
+mark标签用于<font color=red>**标记文本中的重点内容**</font>，默认采用荧光色标记。
+
+```
+<mark>排序算法是我们面试的重点</mark>
+```
+
+### 3.10 details和summary标签
+
+details标签用于表示<font color=red>**详细信息**</font>；summary标签常用于表示<font color=red>**摘要信息**</font>；两者常结合起来使用。
+
+```
+<details>
+    <summary>java编程思想</summary>
+    这本书写得非常好，值得一看
+</details>
+```
+
+**汇总：**
+
+| 序号     | 标签       | 说明    |
+| :-----: | :----:    | :----: |
+| 1       | blockquote| 文本的引用 |
+| 2       | cite      | 文本对某个参考文献的引用 |
+| 3       | address   | 地址 |
+| 4       |  code     | 计算机代码 |
+| 5       |  var      | 变量 |
+| 6       |  dfn      | 定义专业术语 defining instance|
+| 7       |  del      |  删除 delete   |
+| 8       |  pre      |  预先的格式化   |
+| 9       | mark      | 标记文本中的重点内容 |
+| 10      | details   | 详细信息 |
+| 11      | summary   | 摘要信息 |
+
+
