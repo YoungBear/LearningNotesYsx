@@ -2,6 +2,8 @@
 
 [教程地址](http://blog.csdn.net/column/details/17220.html)
 
+[HTML 参考手册-标签列表](http://www.w3school.com.cn/tags/index.asp)
+
 ## 1. HTML 常用标签
 
 ### 1.1 p标签
@@ -372,3 +374,54 @@ article是一个特殊的section标签，它比section更具有明确的语义�
         <footer>课程内容版权均归上海有心网络科技有限公司所有</footer>
     </article>
 ```
+
+## 5. HTML 列表标签
+
+### 5.1 ul标签
+
+ul是unordered list的缩写，表示无序列表。
+
+```
+<ul>
+        <li>华为</li>
+        <li>三星</li>
+        <li>小米</li>
+        <li>锤子</li>
+</ul>
+```
+
+其中li标签表示定义列表项目。
+
+### 5.2 ol标签
+
+ol 是ordered list的缩写，表示有序列表。
+
+```
+<ol>
+        <li>华为</li>
+        <li>三星</li>
+        <li>小米</li>
+        <li>锤子</li>
+</ol>
+```
+
+### 5.3 dl标签
+
+dl 是definition list的缩写，表示定义列表。
+
+dl 标签用于结合 dt （定义列表中的项目）和 dd （描述列表中的项目）。
+
+```
+<dl>
+        <dt>Android四大组件</dt>
+        <dd>Activity</dd>
+        <dd>广播接收者</dd>
+        <dd>内容提供者</dd>
+        <dd>服务</dd>
+        <dt>Android常用布局</dt>
+        <dd>线性布局</dd>
+        <dd>相对布局</dd>
+        <dd>百分比布局</dd>
+</dl>
+```
+
