@@ -639,3 +639,113 @@ datalist标签用于展示**文本框与下拉菜单组合**在一起的效果�
 
 在该示例中，有两个功能：登录和注册；不同的功能那么就有不同的action、method、target、enctype。在此通过formaction、formmethod、formtarget、formenctype属性灵活指定了在不同的操作下不同的表单提交方式。
 
+## 8. HTML5新增标签
+
+### 8.1 meter标签
+
+meter标签用于表示<font color=red>**度量结果**</font>，请看如下示例：
+
+```
+笔记本剩余电量:<meter value="7" min="0" max="10"></meter>
+```
+
+### 8.2 progress标签
+
+progress标签用于表示进度，请看如下示例：
+
+```
+本月已完成工作:<progress value="80" max="100"></progress>
+```
+
+### 8.3 audio标签和video标签
+
+在HTML5之前若想在网页中播放音频和视频都需要借助第三方插件。现在，HTML5直接提供了audio标签和video标签实现音频(推荐采用ogg格式)，视频(推荐采用VP8格式)的播放。请看如下示例：
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML的多媒体标签</title>
+</head>
+<body>
+
+    <h3>利用audio标签播放音频</h3>
+    <audio src="word.mp3" controls="true">
+        当您看到这行文字时，意味着您的设备不支持audio标签
+    </audio>
+
+    <br>
+    <br>
+
+    <h3>利用video标签播放视频</h3>
+    <video src="movie.mp4" controls="true">
+        当您看到这行文字时，意味着您的设备不支持video标签
+    </video>
+</body>
+</html>
+```
+**HTML5强大的API**
+
+在HTML5中融入了众多非常实用的功能，比如：控件的拖拽，绘图，多媒体，地理位置，网络状态，数据存储，全屏等等。这部分功能多涉及到JavaScript，但是呢？嘿嘿，我们还没有讲JavaScript呢！在此，我们先体验一把，待我们学完JavaScript再来深入学习这部分知识。
+
+### 8.4 HTML5监听网络状态
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML监听网络状态</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+    window.addEventListener('online', function() {
+        alert('网络连接已建立！');
+    });
+
+    window.addEventListener('offline', function() {
+        alert('网络连接已断开！');
+    })
+
+    </script>
+</body>
+
+</html>
+```
+
+### 8.5 HTML5定位功能
+
+```
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML5定位</title>
+</head>
+<body>
+    <script>
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    } else {
+        alert("您的浏览器不支持地理定位");
+    }
+
+    // 获取地理位置成功的回调函数
+    function successCallback(position) {
+        var longitude = position.coords.longitude;
+        var latitude = position.coords.latitude;
+        alert("经度=" + longitude + "，纬度=" + latitude);
+    }
+
+    // 获取地理位置失败的回调函数
+    function errorCallback(error) {
+        alert("获取用户位置失败");
+    }
+    </script>
+</body>
+</html>
+```

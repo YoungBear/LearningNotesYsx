@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML5定位</title>
+</head>
+<body>
+    <script>
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    } else {
+        alert("您的浏览器不支持地理定位");
+    }
+
+    // 获取地理位置成功的回调函数
+    function successCallback(position) {
+        var longitude = position.coords.longitude;
+        var latitude = position.coords.latitude;
+        alert("经度=" + longitude + "，纬度=" + latitude);
+    }
+
+    // 获取地理位置失败的回调函数
+    function errorCallback(error) {
+        alert("获取用户位置失败");
+    }
+    </script>
+</body>
+</html>
