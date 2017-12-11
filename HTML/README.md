@@ -425,3 +425,71 @@ dl 标签用于结合 dt （定义列表中的项目）和 dd （描述列表中
 </dl>
 ```
 
+## 6. HTML表格标签
+
+在HTML中与表格相关的标签简述如下：
+
+- table标签用于展示表格
+- caption标签用于显示表格的标题
+- tr标签用于表示表格的行
+- th标签用于表示表格的表头单元格
+- td标签用于表示单元格
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML表格标签</title>
+</head>
+<body>
+<table  border="2" width="600"  height="400" align="center"
+    bgcolor="pink" cellspacing="0" cellpadding="0">
+
+    <caption><h2>中国著名演员</h2></caption>
+
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>城市</th>
+    </tr>
+
+    <tr align="center">
+        <td>李冰冰</td>
+        <td>32</td>
+        <td>女</td>
+        <td>北京</td>
+    </tr>
+
+    <tr align="center">
+        <td>范冰冰</td>
+        <td>20</td>
+        <td>女</td>
+        <td>上海</td>
+    </tr>
+
+    <tr align="center">
+        <td>刘德华</td>
+        <td>47</td>
+        <td>男</td>
+        <td>香港</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
+```
+
+其中，与表格相关的辅助标签有：
+
+- border: 表格的边框的宽度
+- cellspacing: 设置单元格之间的距离
+- cellpadding: 设置单元格中文字距离单元格边框的距离，与Android中的padding类似
+- align: 设置对齐方式
+- bgcolor: 设置背景颜色
+
+**注意**：
+
+刚才提到的这些属性在HTML5中建议开发人员不再在HTML中直接使用，而应该把这些与**样式相关的属性**全部放到CSS中去。
