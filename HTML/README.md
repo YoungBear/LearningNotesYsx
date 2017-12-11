@@ -493,3 +493,149 @@ dl 标签用于结合 dt （定义列表中的项目）和 dd （描述列表中
 **注意**：
 
 刚才提到的这些属性在HTML5中建议开发人员不再在HTML中直接使用，而应该把这些与**样式相关的属性**全部放到CSS中去。
+
+## 7. HTML表单标签
+
+HTML表单用于搜集用户输入的不同类型的数据并将其上传至服务端。
+
+### 7.1 input标签
+
+input标签是表单中功能最丰富的标签，很多输入相关的控件均可以用input标签来实现。
+
+|序号  |type      |描述      |
+|:----:|:--------:|:--------:|
+|1     |text      |单行文本框|
+|2     |password  |密码输入框|
+|3     |number    |数字输入框|
+|4     |email     |邮箱输入框|
+|5     |date      |日期输入框|
+|6     |time      |时间输入框 |
+|7     |color     |颜色输入框|
+|8     |radio     |单选框|
+|9     |checkbox  |复选框 |
+|10    |file      |文件上传|
+|11    |submit    |提交 |
+|12    |reset     |重置 |
+
+### 7.2 select和option标签
+
+利用select和option标签可实现**下拉选择**，比如用户注册时的省份选择。与Android中的Spinner类似。
+
+```
+            籍贯:<select name="province">
+                <option >河北</option>
+                <option >辽宁</option>
+                <option >吉林</option>
+                <option >云南</option>
+                <option selected="selected">广西</option>
+            </select>
+```
+
+### 7.3 textarea标签
+
+利用textarea标签可在HTML中创建供用户输入的文本区域。
+
+### 7.4 表单的提交相关的标签
+
+**action** 处理表单数据的服务器地址
+
+**method** 提交表单的方式，常用的为get和post
+
+**enctype** 表示将表单数据发送到服务器之前对表单数据进行编码。它有三种取值：
+
+- `application/x-www-form-urlencoded`：此为**默认**方式，在发送数据前将数据中的特殊字符进行URL编码处理。比如，将空格变为+号，将特殊符号转换为 ASCII HEX 值。
+- `text/plain`：该取值的作用与application/x-www-form-urlencoded非常类似，它也将表示将空格转换为 “+” 加号，但不对特殊字符编码
+- `multipart/form-data`：表示**不对字符编码**。在使用包含**文件上传**控件的表单时，必须使用该值。
+
+其实，这和我们之前写Android代码是非常类似的，是不是觉得很眼熟？比如，在APP中上传图片，我们会设置：
+
+`multipartBodyBuilder.setType(MultipartBody.FORM);`
+
+点开源码就会发现`MultipartBody.FORM`的值正是`multipart/form-data`。
+
+**target** 指定显示方式。
+
+- <font color=red>_self</font> 它表示在原窗口中显示数据
+- <font color=red>_blank</font> 它表示在新窗口中显示数据
+
+**一些需要注意的地方：**
+
+- 上传的表单中含有文件时，请选用post方式提交
+- 上传的表单中含有文件时，请将enctype属性值设置为multipart/form-data
+- 利用多个input标签组合在一起实现单选时，请将它们的 type均设置为radio；并将它们的name均设置为同一值。多选的情况，亦类似；不再赘述
+
+### 7.5 HTML5中表单的新特性
+
+**form属性**
+
+在HTML5之前，所有的表单标签都必须放在form标签中。但是，在HTML5中新增了form属性，用于表示该标签所属的form标签。所以，每个标签不必必须放在form标签中也能成为表单的一部分，只需把该标签的form属性的值设置为其所属表单的id即可。例如，在刚才的示例中再添加一个输入框用于记录毕业院校：
+
+```
+毕业院校:<input type="text" name="school" form="userform">
+```
+
+代码如上所示，那么该input标签也属于了userform表单；亦会被提交至服务端。
+
+**datalist标签**
+
+datalist标签用于展示**文本框与下拉菜单组合**在一起的效果，请注意datalist的id值必须是form表单的list属性值。请看如下示例：
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>datalist标签</title>
+</head>
+<body>
+    <form action="url" method="get">
+        请输入你最喜欢的女明星:<input type="text" name="name" list="namesList">
+    </form>
+    <datalist id="namesList">
+        <option value="lbb">李冰冰</option>
+        <option value="fbb">范冰冰</option>
+        <option value="gyy">高圆圆</option>
+    </datalist>
+</body>
+</html>
+```
+
+**formxxxx属性**
+
+为了更加方便的操控表单标签，在HTML5中新增了几个formxxxx属性，简介如下：
+
+- formaction 属性用于指定表单提交的地址
+
+- formmethod 属性用于指定表单提交的方式
+
+- formtarget 属性用于指定打开服务端响应URL的方式
+
+- formenctype 属性用于指定表单数据提交时的编码方式
+
+请看如下示例：
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML表单中的formxxx属性</title>
+</head>
+<body>
+    <form>
+        username:<input type="text" name="un">
+        <br>
+        <br>
+        password:<input type="password" name="pw">
+        <br>
+        <br>
+        <input type="submit" value="注册" formaction="regist url" formmethod="get" formtarget="_self" formenctype="application/x-www-form-urlencoded" >
+
+        <input type="submit" value="登录" formaction="login url" formmethod="post" formtarget="_blank" formenctype="multipart/form-data">
+    </form>
+</body>
+</html>
+```
+
+在该示例中，有两个功能：登录和注册；不同的功能那么就有不同的action、method、target、enctype。在此通过formaction、formmethod、formtarget、formenctype属性灵活指定了在不同的操作下不同的表单提交方式。
+
