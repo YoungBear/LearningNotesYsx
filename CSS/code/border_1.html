@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS的盒子模型</title>
+    <style type="text/css">
+    input {
+        border: none;
+        outline-style: none;
+    }
+
+    .username {
+        border: 1px dashed red;
+        background: yellowgreen;
+    }
+
+    .username:focus {
+        background-color: yellow;
+    }
+
+    .email {
+        border-bottom: 1px dotted red;
+    }
+
+    .search {
+        border: 1px solid black;
+        background-image: url("search.png");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    </style>
+</head>
+
+<body>
+    <label for="uid">用 户: </label>
+    <input type="text" class="username" id="uid">
+    <br>
+    <br>
+    <label for="eid">邮 箱：</label>
+    <input type="text" class="email" id="eid">
+    <br>
+    <br>
+    <label for="sid">搜 索: </label>
+    <input type="text" class="search" id="sid">
+</body>
+
+</html>

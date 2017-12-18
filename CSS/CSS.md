@@ -388,3 +388,223 @@ eg.
 **请注意：后代选择器和子选择器的区别：**
 
 子选择器仅作用于标签的直接后代(第一代后代)；而后代选择器作用于标签的所有子孙后代元素。
+
+## 2. 伪类
+
+在CSS中，伪类用于向某些选择器添加特殊的效果。
+
+在此介绍与超链接标签a有关的伪类。请看如下示例：
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类</title>
+    <style type="text/css">
+
+            a:link{
+                 color: red;
+                 text-decoration: none;  
+            } 
+
+            a:visited{
+                color: pink;
+            }
+
+            a:hover{
+                 color: green;
+                 text-decoration: underline;   
+            }
+
+            a:active{
+                 color: black;
+            }
+
+        </style>
+</head>
+<body>
+    <a href="http://blog.csdn.net/lfdfhl" target="_blank">谷哥的小弟</a>
+</body>
+</html>
+```
+
+代码详解如下：
+
+- 利用a:link{ }设置了**超链接的颜色**，它的作用等同于a{ }选择器；但是某些浏览器不支持a:link{ }的写法导致其设置失效
+
+- 利用a:visited{ }设置**超链接访问过后**的样式
+
+- 利用a:hover{ }设置**鼠标放到超链接上**时的样式
+
+- 利用a:active{ }设置**超链接被点击瞬间**的样式
+
+- 请按照先后顺序实现a:visited{ }和a:hover{ }以及a:active{ }从而确保浏览器显示预计的效果
+
+请分别在IE浏览器和谷歌浏览器中运行本示例，注意伪类在不同浏览器中可能出现的细微差异。
+
+## 3. 伪元素
+
+在CSS中，伪元素用于将特殊的效果添加到某些选择器。在此介绍几个CSS中常用的伪元素。
+
+- `:first-letter` 用于向文本中的**第一个字**设置特殊样式。
+- `:first-line` 用于向文本的**首行**设置特殊样式。
+- `:before` 用于在元素的内容**之前**插入新内容。
+- `:after` 用于在元素的内容**之后**插入新内容。
+
+## 4. 盒子模型
+在网页设计中CSS的盒子模型是一个非常重要的概念。HTML中的每个元素占据一个矩形区域，这块区域就是该元素所占据的盒子。
+
+盒子包括如下几个部分：border、content、padding、margin。
+
+- border，即盒子的外边框
+- content，即盒子中所容纳的内容
+- padding，即内容与边框之间的填充
+- margin，即盒子与外界(其它盒子)之间的间隔
+
+### 4.1 边框(border)
+
+border常见属性：
+
+- 宽度:`border-width:5px;`
+- 样式:`border-style:solid;`常见的样式：solid(实线)、dotted(点线)、dashed(虚线)
+- 颜色:`border-color:red;`
+
+eg.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style type="text/css">
+        div{
+            width: 370px;
+            height: 100px;
+            background-color: yellow;
+            border-width: 2px;
+            border-style: dashed;
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>本文作者：谷哥的小弟</p>
+        <p>博客地址：http://blog.csdn.net/lfdfhl</p>
+    </div>
+</body>
+</html>
+```
+
+当然，也可以**单独设置**某条边框的样式，分别为top,right,bottom,left。例如：
+
+```
+border-top-width:1px;
+border-top-style:solid;
+border-top-color: green;
+```
+
+我们也可以进行属性的**连写**(顺序可以改变)。
+
+```
+border-left:1px dotted  pink;
+border-right: 1px dashed black;
+border-bottom: 1px solid red;
+```
+
+### 4.2 内容(content)
+
+盒子中的内容各不相同，视具体的需求而定。比如：图片，文本，视频，音频等等。
+
+### 4.3 填充(padding)
+
+与Android类似，padding-top,padding-right,padding-bottom,padding-left(从top逆时针旋转)。也可以统一设置padding。
+
+**关于填充(padding)的属性联写：**
+
+- padding: 10px; 表示上，右，下，左的填充值为10px 
+- padding: 10px 20px;表示上和下的填充值为10px；左和右的padding值为20px 
+- padding: 10px 20px 30px;表示上的填充值为10px ；左和右的padding为20px；下的填充值为30px 
+- padding: 10px 20px 30px 40px;表示上， 右 ， 下， 左的填充值
+
+### 4.4 间隔(margin)
+
+与Android类似，margin-top,margin-right,margin-bottom,margin-left。
+
+### 4.5 overflow
+
+overflow属性用于指定当内容**溢出元素时**的应对措施。
+
+- `overflow: visible` visible为overflow属性的**默认值**。使用该值后，假若元素中内容过多，这些内容不会被修剪，会在元素之外显示。
+- `overflow: hidden`使用该值后，假若元素中内容过多，**超出部分将被隐藏**。
+- `overflow: auto`使用该值后，假若元素中内容过多，那么系统会为元素设置滚动条；假若内容不够多并没有超出元素，那么系统不会为元素设置滚动条。所以，在实际开发中多采用该属性。
+- `overflow: scorll`使用该值后，不论元素中内容是否超出元素的大小，系统都会为元素设置滚动条。
+
+eg.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>overflow</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        margin: 50px;
+        width: 350px;
+        height: 100px;
+        border: 1px solid red;
+        overflow: auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>本文作者:谷哥的小弟</p>
+        <p>博客地址:http://blog.csdn.net/lfdfhl</p>
+        <p>我们一起学习HTML</p>
+        <p>我们一起学习CSS</p>
+        <p>我们一起学习JS</p>
+        <p>我们一起学习Android</p>
+        <p>我们一起学习J2EE</p>
+    </div>
+</body>
+
+</html>
+```
+
+### 4.6 元素居中
+
+使用`margin: 0 auto;`可以使元素居中。
+
+### 4.7 图文对齐
+
+使用`vertical-align`属性实现图文对齐的功能，其取值及对应作用如下：
+
+- `baseline` 元素放置在父元素的基线上，默认值。
+- `sub` 垂直对齐文本的下标
+- `super` 垂直对齐文本的上标
+- `top` 把元素的顶端与行中最高元素的顶端对齐
+- `text-top` 把元素的顶端与父元素字体的顶端对齐
+- `middle` 把此元素放置在父元素的中部
+- `bottom` 把元素的顶端与行中最低的元素的顶端对齐
+- `text-bottom` 把元素的底端与父元素字体的底端对齐
+
+### 需要注意的问题
+
+**第一个问题：**
+
+两个盒子**垂直**显示的时候，如果上方的盒子设置了margin-bottom: Mpx并且下方的盒子设置了 margin-top:Npx；那么两者的实际间距并不是M+N而是M、N两者的**最大值**。
+
+**第二个问题：**
+
+两个盒子**嵌套**显示的时候，若想通过给内部的盒子设置margin-top:Mpx;使其距离外部盒子顶部产生一定距离；此时发现无效，需要给外部盒子设置overflow: hidden;方可解决该问题。
