@@ -767,5 +767,216 @@ eg.
 2、利用浮动(float)制作导航栏
 3、利用浮动(float)实现网页布局
 
+## 7. position定位
 
+### 简介
 
+定位(position)允许用户较为精确地定义元素出现的相对位置，这个位置可以是相对于其本身出现的位置，也可以是相对于其上级元素的位置，也可以是相对于其他元素的位置，亦可为相对于浏览器视窗左上角的位置。
+
+### 语法
+
+- 定位(position)常用类型：static、absolute、relative、fixed
+- 定位(position)通常与top、right、bottom、left属性联合使用
+- 定位(position)的使用可能导致元素脱离标准流
+
+### 7.1 static
+position:static是CSS中默认的定位类型，在该类型下元素以标准流的显示方式，其位置不受top、bottom、left、right的影响。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>static定位</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        width: 510px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: greenyellow;
+        position: static;
+        left: 50px;
+        top: 80px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>凯里欧文</div>
+</body>
+
+</html>
+```
+
+在该示例中，在标签选择器div里设置了position:static并且为left和top属性设置了具体的值，但是我们发现：<div></div>的位置没有发生改变。
+
+### 7.2 absolute
+
+`position:absolute`用于生成**绝对定位**的元素，即相对于static定位以外的第一个父元素进行定位。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>absolute定位</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        width: 510px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: #7FFF00;
+        position: absolute;
+        left: 50px;
+        top: 80px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>本文作者:谷哥的小弟</p>
+        <p>博客地址:http://blog.csdn.net/lfdfhl</p>
+    </div>
+</body>
+
+</html>
+```
+
+在该示例中，在标签选择器div里设置了position:absolute并且为left和top属性设置了具体的值，程序运行后发现<div></div>的位置像我们期待的那样发生了移动。
+
+在此，小结position:absolute的特点：
+
+- 当为元素设置了position:absolute，那么该元素会脱离标准流(脱标)，这一点和浮动很类似
+- 当为一个单独的元素设置position:absolute，该元素会以浏览器左上角(<body></body>左上角)为基准设置定位
+- 当元素发生嵌套时，如果父元素没有设置除了static之外的其他定位；子元素设置position:absolute；在该情况下：子元素的定位以浏览器左上角(<body></body>左上角)为基准设置定位。
+- 当元素发生嵌套时，如果父元素设置除了static之外的其他定位；子元素设置position:absolute；在该情况下：子元素的定位以父元素的左上角为基准。
+- 为行内元素(比如<span></span>)设置position:absolute后该行内元素会转化为行内块元素
+
+### 7.3 relative
+
+`position:relative`用于微调元素位置，即相对于元素本身原来的位置进行调整。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>relative定位</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .firstBox {
+        width: 510px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: #7FFF00;
+        position: relative;
+        top: 40px;
+        left: 90px;
+    }
+
+    .secondBox {
+        width: 510px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: #00FFFF;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="firstBox">        
+        <p>本文作者:谷哥的小弟</p>
+        <p>博客地址:http://blog.csdn.net/lfdfhl</p>
+    </div>
+    <div class="secondBox">
+        <p>有心课堂</p>
+        <p>http://www.stay4it.com/</p>
+    </div>
+</body>
+
+</html>
+```
+
+在该示例中，在类选择器firstBox中设置了position:relative和left、top属性。从效果图中可以看到：使用了类选择器firstBox的<div></div>的位置发生了改变。
+
+在此，小结position:relative的特点：
+
+- 元素设置position:relative后会根据top、right、bottom、left的值并以其原始位置为参照进行移动。
+- 元素设置position:relative后该元素不会脱离标准流。
+- 元素设置position:relative后不能进行元素的模式转换，比如：不能将行内元素<span></span>转换为行内块元素。
+- position:relative一种常见的用法：子绝父相，即子元素设置绝对定位position:absolute而父元素设置相对定位position:relative。
+
+### 7.4 fixed
+
+`position:fixed`表示固定定位，即相对浏览器窗口定位。采用该定位后，不论页面如何滚动，该盒子显示的位置不变。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>fixed定位</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        position: fixed;
+    }
+
+    p {
+        width: 500px;
+        background-color: #7FFF00;
+    }
+    </style>
+</head>
+
+<body>
+    <img src="bear.jpg" width="100px" height="110px">
+    <p>
+       凯里·欧文于2011年以选秀状元身份进入NBA，新秀赛季当选最佳新秀；2014年首次入选全明星正赛先发阵容，并当选最有价值球员；2014-15赛季入选最佳阵容第三阵容；2015-16赛季随骑士队获得NBA总冠军。
+    </p>
+</body>
+
+</html>
+```
+
+在该示例中，在标签选择器img中设置了position:fixed;属性。从效果图中可以看到：图片一直固定在某个位置，当我们拖动滚动条时它的位置仍然保持不变。
+
+在此，小结position:fixed的特点：
+
+- 设置position:fixed后元素会固定定位且不占位置并脱离标准流。
+- 设置position:fixed后会将行内元素转化为行内块元素。
+- 设置position:fixed后可通过z-index进行层次分级。
+
+### 规避脱标流
+
+有时使用float和position来实现某种效果，但是这很可能导致某些元素脱离标准流(脱标)；所以，应尽可能地避免脱标，可遵守以下原则：
+
+- 网页布局过程中尽量使用标准流布局
+- 标准流不能解决的问题优先考虑使用浮动
+- 浮动不能解决的问题再考虑使用定位
+- 在子元素中使用margin-left:auto 将其置于父元素的最右边
+- 在子元素中使用margin-right:auto将其置于父元素的最左边
+- 在子元素中使用margin 0 auto;使其在父元素内水平居中显示
