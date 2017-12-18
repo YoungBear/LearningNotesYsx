@@ -608,3 +608,149 @@ eg.
 **第二个问题：**
 
 两个盒子**嵌套**显示的时候，若想通过给内部的盒子设置margin-top:Mpx;使其距离外部盒子顶部产生一定距离；此时发现无效，需要给外部盒子设置overflow: hidden;方可解决该问题。
+
+## 5. display属性
+
+### HTML标签的分类
+
+按照标签显示方式的不同将HTML标签分为：块级标签(block)，行内标签(inline)，行内块标签(inline-block)；现对其分别介绍。
+
+**1. 块级标签(block)**
+
+典型的块级标签有：`<p></p>，<div></div>，<h1></h1>，<form></form>，<ul></ul>`
+
+它们具有如下特点：
+
+- 块级标签**独占一行**显示(不论其实际宽度是否有屏幕那么宽)
+- 块级标签的高度、宽度、行高以及顶和底边距都可设置
+- 当块级标签发生嵌套时候如果子标签未设置宽度，那么该子标签的宽度为其父标签的宽度
+
+**2. 行内标签(inline)**
+
+典型的行内标签有：`<span></span>，<strong></strong>，<label></label>，<a></a>，<br>`
+
+它们具有如下特点：
+
+- 行内标签**不会独占一行**显示，会和其他标签在同一行显示
+- 不能直接设置行内标签的高度、宽度、行高以及顶和底边距
+- 行内标签的宽度就是它包含的文字或图片的宽度
+
+**3. 行内块标签(inline-block)**
+
+典型的行内标签有：`<img>，<input>`
+
+它们具有如下特点：
+
+- 行内块标签在同一行显示
+- 可以设置行内块标签的高度、宽度
+
+### display属性
+
+在某些需求下，我们可以利用display实现块级标签、行内标签、行内块标签的相互转换。
+
+### 5.1 将行内标签转换为块级标签
+
+`display: block;`可以将行内标签转换成块级标签。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>display属性</title>
+    <style type="text/css">
+    a {
+        width: 300px;
+        height: 100px;
+        font-size: 30px;
+        font-family: 宋体;
+        text-decoration:none;
+        color: red;
+        background-color: yellow;
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <a href="http://blog.csdn.net/lfdfhl">原创作者</a>
+    <br>
+    <a href="http://blog.csdn.net/lfdfhl">谷哥的小弟</a>
+</body>
+
+</html>
+```
+
+在此，在标签选择器a中利用了display: block将标签<a></a>从行内标签转换成了块级标签。所以，点击整个黄色区域都可以实现超链接。换句话说：原本的<a></a>标签是不能指定其宽高的，但是在此通过display: block就将其转换成了块级标签从而扩大了超链接的点击区域。
+
+### 5.2 将行内标签转换为行内块标签
+
+`display: inline-block;` 将行内标签转换成行内块标签。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>display属性</title>
+    <style type="text/css">
+    a {
+        width: 300px;
+        height: 300px;
+        font-size: 30px;
+        font-family: 宋体;
+        color: red;
+        background-color: pink;
+        text-decoration: none;
+        display: inline-block;
+    }
+    </style>
+</head>
+
+<body>
+    <a href="http://blog.csdn.net/lfdfhl">原创作者</a>
+    <a href="http://blog.csdn.net/lfdfhl">CSDN 谷哥的小弟</a>
+</body>
+
+</html>
+
+```
+
+其中，a本身是超链接标签，属于行内标签。转换为行内块标签后，可以设置宽高了，并且可以将它们放在同一行显示了。
+
+### 5.3 将块级标签转换为行内标签
+
+`display: inline;` 将块级标签转换成了行内标签。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>display属性</title>
+    <style type="text/css">
+    div {
+        font-size: 30px;
+        font-family: 宋体;
+        color: red;
+        background-color: pink;
+        margin-left: 15px;
+        display: inline;
+    }
+    </style>
+</head>
+
+<body>
+    <div>谷哥的小弟 </div>
+    <div>http://blog.csdn.net/lfdfhl</div>
+</body>
+
+</html>
+```
+
+在此，在标签选择器div中利用了display: inline将标签<div></div>从块级标签转换成了行内标签。既然是行内标签那么就可以将两个<div></div>放到同一行显示了；当然，此时为其设置的宽和高也就无效了。
+
+
